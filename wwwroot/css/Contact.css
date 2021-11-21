@@ -1,0 +1,356 @@
+html,
+body {
+  font-family: "DroidArabicKufiRegular";
+  margin-right: 0px;
+}
+ 
+#header {
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    transition: 0.2s linear;
+    font-family: "DroidArabicKufiRegular";
+
+  }
+  .blue-brd-btn{
+    color: #fff;
+    padding: 14px 34px;
+    display: inline-block;
+    border: 2px solid #006dff;
+    font-size: 15px;
+    text-align: center;
+    background: #006dff;
+    cursor: pointer;
+    font-family: "DroidArabicKufiRegular";
+    transition: 0.2s linear;
+  }
+
+  header .blue-brd-btn {
+    margin-right: 13px;
+    font-family: "DroidArabicKufiRegular";
+    display: inline-block;
+  }
+  
+  header .header-block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  header .nav-menu a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: 0.2s linear;
+  }
+  
+  header .nav-menu a:hover {
+    color: #1f3766;
+  }
+  
+  header .nav-menu span {
+    color: #006dff;
+    margin-right: 3px;
+    font-weight: 700;
+  }
+  
+  header .nav-menu li {
+    position: relative;
+    padding: 43px 21px;
+    list-style: none;
+    transition: 0.2s linear;
+    font-family: "DroidArabicKufiRegular";
+
+  }
+  
+  header .nav-menu li:not(:last-child) {
+    margin-left: 0;
+  }
+  
+  header .nav-menu li.top-sub-menu:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #190a2e 0%, #281643 100%);
+  }
+  
+  header .nav-menu li.top-sub-menu:hover > a {
+    color: #006dff;
+  }
+  
+  header .nav-menu li.top-sub-menu:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    background: linear-gradient(to bottom, #281643 0%, #3b2a5a 100%);
+  }
+  
+  header .nav-menu .sub-menu {
+    top: 100%;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    padding: 12px 0 17px 0;
+    text-align: right;
+    z-index: 9;
+    position: absolute;
+    transition: 0.2s linear;
+  }
+  
+  header .nav-menu .sub-menu li {
+    padding: 0;
+  }
+  
+  header .nav-menu .sub-menu li a {
+    color: #fff;
+    display: block;
+    padding: 0 19px;
+  }
+  
+  header .nav-menu .sub-menu li a:hover {
+    color: #006dff;
+  }
+  
+  header .nav-menu .sub-menu li:not(:last-child) {
+    margin-bottom: 17px;
+  }
+  
+  header .logo {
+    max-width: 208px;
+    margin-top: 1em;
+  }
+  
+  header .logo-fixed {
+    display: none;
+  }
+  
+  header.fixed {
+    background: #0030ff;
+    background-color: linear-gradient(to bottom, #0030ff 0%, #006dff 100%);
+  }
+  
+  header.fixed .nav-menu li {
+    padding: 43px 21px;
+  }
+  
+  header.fixed .nav-menu .sub-menu li {
+    padding: 0;
+  }
+  
+  
+  
+  #logo{
+     display: flex;
+     justify-content:flex-end;
+     top: 15px;
+     font-size: 35px;
+     color: #fff;
+  }
+ 
+/*=========================================
+=            10. Contact Style            =
+=========================================*/
+ .first-section.not-images {
+    /* background-image: url(../img/first-section-bg.png) no-repeat ; */
+    height:400px;
+    color: white;
+    text-align: center;
+    background-image: url(../img/first-section-not-images.png);
+    background-repeat: no-repeat;
+    
+}
+.col-xl-12 h1{
+    margin-top: 300px;
+    font-family: "DroidArabicKufiRegular";
+    font-size: 40px;
+    font-weight: bold;
+}
+.row{
+    margin-top: -200px;
+}
+
+.contact-block {
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.contact-block .bg {
+    padding: 57px 30px 28px 55px;
+    background-color: #f5f9fc;
+    font-family: "DroidArabicKufiRegular";
+}
+
+.contact-block h4 {
+    margin-bottom: 63px;
+    color: #131149;
+    font-weight: bold;
+    font-size: 23px;
+
+}
+
+.contact-block form.custom-form .form-group {
+    width: 306px;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.contact-block form.custom-form .form-group:nth-child(odd) {
+    margin-left: 67px;
+}
+
+.contact-block form.custom-form .form-group.last {
+    width: 100%;
+    margin: 0 0 19px 0;
+}
+
+.contact-block .contact-info {
+    color: #fff;
+    padding: 56px 50px 56px 62px;
+    display: inline-block;
+    height: 100%;
+    box-shadow: 6px -1px 20px 1px rgba(18, 15, 71, 0.17);
+    background-color: #131149;
+    font-family: "DroidArabicKufiRegular";
+
+}
+
+.contact-block .contact-info h4 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 56px;
+}
+
+.contact-block .contact-info ul li img {
+    width: 20px;
+    margin-left: 15px;
+}
+
+.contact-block .contact-info ul li span {
+    font-size: 16px;
+    line-height: 27px;
+    color: #f5f9fc;
+}
+
+.contact-block .contact-info ul li a {
+    font-size: 16px;
+    line-height: 27px;
+    color: #f5f9fc;
+}
+
+.contact-block .contact-info ul li a:hover {
+    color: #006dff;
+}
+
+.contact-block .contact-info ul li:not(:last-child) {
+    padding-bottom: 40px;
+}
+
+
+        
+/*=====  End of 10. Contact Style  ======*/
+ /* 06. Footer Style            =
+        ======================================== */
+        /**
+         Navigation File
+        
+         01. Footer
+         02. Copyright
+        
+         */
+        /* 01. Footer
+           ==================================== */
+           footer {
+            padding-top: 410px;
+            min-height: 565px;
+            font-family: "DroidArabicKufiRegular";
+            background: url('../img/bg-footer.png') no-repeat;
+            background-size: cover;
+        }
+        
+            footer ul li {
+                line-height: 28px;
+            }
+        
+                footer ul li a {
+                    color: #3a3864;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+        
+                    footer ul li a:hover {
+                        color: #006dff;
+                    }
+        
+            footer .title {
+                color: #100f45;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 22px;
+                text-transform: uppercase;
+            }
+        
+            footer .logo {
+                padding-left: 0;
+            }
+           
+        
+                footer .logo img {
+                    max-width: 208px;
+                    margin-bottom: 22px;
+                }
+        
+            footer .inside-column {
+                padding-right: 100px;
+            }
+        
+            footer .inside {
+                padding-right: 60px;
+            }
+        
+            footer .footer-menu-wrap {
+                margin-bottom: 85px;
+            }
+        
+            footer .footer-social-wrapper {
+                padding-left: 71px;
+            }
+        
+        .footer-social-wrapper {
+            text-align: left;
+        }
+        
+            .footer-social-wrapper img {
+                max-width: 18px;
+            }
+        
+            .footer-social-wrapper a {
+                margin-left: 0;
+            }
+        
+                .footer-social-wrapper a:not(:last-child) {
+                    margin-left: 14px;
+                }
+        
+                .footer-social-wrapper a:hover svg path {
+                    fill: #006dff;
+                }
+        /* 02. Copyright
+           ==================================== */
+        .copyright {
+            padding: 14px 0;
+            background-color: #f1f5fb;
+        }
+        
+            .copyright p {
+                font-size: 14px;
+                color: #9e9fb5;
+                font-weight: 600;
+            }
+        /*=====  End of 06. Footer Style  ======*/
