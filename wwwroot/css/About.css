@@ -22,6 +22,8 @@ body {
     z-index: 999;
     position: fixed;
     transition: 0.2s linear;
+    font-family: "DroidArabicKufiRegular";
+
   }
   
   #header .blue-brd-btn {
