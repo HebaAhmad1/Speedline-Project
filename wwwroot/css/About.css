@@ -144,6 +144,13 @@ body {
     margin-right: 25px;
     font-weight: 0px;
  }
+ .l h3{
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+    margin: 20px;
+    font-family: cursive;
+ }
  .blue-brd-btn{
     color: #fff;
     height: 90px;

@@ -240,7 +240,13 @@ body {
         background-color: rgba(255,255,255,0.85);
         text-align: center;
     }
-
+    .l h3{
+      font-size: 30px;
+      color: blue;
+      text-align: center;
+      margin: 20px;
+      font-family: cursive;
+   }
         .price-plan-block .price-plan-item-inside h4 {
             color: #fdfdfe;
             font-size: 18px;

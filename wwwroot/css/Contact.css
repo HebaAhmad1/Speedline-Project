@@ -24,6 +24,19 @@ body {
     cursor: pointer;
     transition: 0.2s linear;
   }
+  #logo p .s{
+    color: #3a3864;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  .l h3{
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+    margin: 20px;
+    font-family: cursive;
+ }
   #logo h3{
     font-size: 24px;
     color: white;

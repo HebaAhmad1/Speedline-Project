@@ -20,7 +20,13 @@ body {
     transition: 0.2s linear;
   }
   
-  
+  .l h3{
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+    margin: 20px;
+    font-family: cursive;
+ }
   .h2-main {
     color: #131149;
     font-weight: 600;

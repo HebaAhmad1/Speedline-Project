@@ -257,7 +257,13 @@ header .nav-menu a {
 header .nav-menu a:hover {
   color: #006dff;
 }
-
+.l h3{
+  font-size: 30px;
+  color: blue;
+  text-align: center;
+  margin: 20px;
+  font-family: cursive;
+}
 header .nav-menu span {
   color: #006dff;
   margin-right: 3px;
