@@ -39,29 +39,25 @@ body {
   .animatedParent {
     overflow: hidden;
   }
-  /*=====  End of 03. Base Style  ======*/
-  /*========================================
-  =            04. Header Style            =
-  ========================================*/
-  
-  /* 01. Header
-     ==================================== */
-  header {
+
+
+  #header {
     right: 0;
     width: 100%;
     z-index: 999;
     position: fixed;
     transition: 0.2s linear;
-    font-family: cursive;
+    font-family: "DroidArabicKufiRegular";
+
   }
   
-  header .blue-brd-btn {
+  #header .blue-brd-btn {
     margin-right: 13px;
     font-family: "DroidArabicKufiRegular";
     display: inline-block;
   }
   
-  header .header-block {
+  #header .header-block {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
@@ -72,51 +68,53 @@ body {
     align-items: center;
   }
   
-  header .nav-menu a {
+  #header .nav-menu a {
+    font-family: "DroidArabicKufiRegular";
     color: #fff;
     font-size: 15px;
     font-weight: 400;
     transition: 0.2s linear;
   }
   
-  header .nav-menu a:hover {
-    color: #1f3766;
+  #header .nav-menu a:hover {
+    color: #006dff;
+    font-family: "DroidArabicKufiRegular";
   }
   
-  header .nav-menu span {
+  #header .nav-menu span {
     color: #006dff;
     margin-right: 3px;
     font-weight: 700;
   }
   
-  header .nav-menu li {
+  #header .nav-menu li {
     position: relative;
     padding: 43px 21px;
     list-style: none;
     transition: 0.2s linear;
   }
   
-  header .nav-menu li:not(:last-child) {
+  #header .nav-menu li:not(:last-child) {
     margin-left: 0;
   }
   
-  header .nav-menu li.top-sub-menu:hover {
+  #header .nav-menu li.top-sub-menu:hover {
     cursor: pointer;
     background: linear-gradient(to bottom, #190a2e 0%, #281643 100%);
   }
   
-  header .nav-menu li.top-sub-menu:hover > a {
+  #header .nav-menu li.top-sub-menu:hover > a {
     color: #006dff;
   }
   
-  header .nav-menu li.top-sub-menu:hover .sub-menu {
+  #header .nav-menu li.top-sub-menu:hover .sub-menu {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
     background: linear-gradient(to bottom, #281643 0%, #3b2a5a 100%);
   }
   
-  header .nav-menu .sub-menu {
+  #header .nav-menu .sub-menu {
     top: 100%;
     right: 0;
     width: 100%;
@@ -130,17 +128,17 @@ body {
     transition: 0.2s linear;
   }
   
-  header .nav-menu .sub-menu li {
+  #header .nav-menu .sub-menu li {
     padding: 0;
   }
   
-  header .nav-menu .sub-menu li a {
+  #header .nav-menu .sub-menu li a {
     color: #fff;
     display: block;
     padding: 0 19px;
   }
   
-  header .nav-menu .sub-menu li a:hover {
+  #header .nav-menu .sub-menu li a:hover {
     color: #006dff;
   }
   
@@ -148,15 +146,47 @@ body {
     margin-bottom: 17px;
   }
   
-  header .logo {
+  #header .logo {
     max-width: 208px;
     margin-top: 1em;
   }
   
-  header .logo-fixed {
+  #header .logo-fixed {
     display: none;
   }
-  
+  #logo{
+    display: flex;
+    justify-content:flex-end;
+    top: px;
+    font-size: 35px;
+    color: #fff;
+ }
+ #logo h3{
+    font-size: 24px;
+    color: white;
+    margin-top: 35px;
+    font-family: cursive;
+    margin-right: 25px;
+    font-weight: 0px;
+ }
+ .l h3{
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+    margin: 20px;
+    font-family: cursive;
+ }
+ .blue-brd-btn{
+    color: #fff;
+    height: 90px;
+    padding: 10px 34px;
+    display: inline-block;
+    border: 2px solid #006dff;
+    text-align: center;
+    background: #006dff;
+    cursor: pointer;
+    transition: 0.2s linear;
+  }
   header.fixed {
     background: #0030ff;
     background: linear-gradient(to bottom, #0030ff 0%, #006dff 100%);
@@ -165,20 +195,26 @@ body {
   header.fixed .nav-menu li {
     padding: 43px 21px;
   }
-  
+#sync1 .item1 .blue-brd-btn:hover,
+#sync1 .item1 .blue-brd-btn:active {
+  background: #110f46;
+  border: 2px solid #110f46;
+}
   header.fixed .nav-menu .sub-menu li {
     padding: 0;
   }
-  
-  
-  
-  #logo{
-     display: flex;
-     justify-content:flex-end;
-     top: 15px;
-     font-size: 35px;
-     color: #fff;
-  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .first-section {
     padding: 145px 0 0;
@@ -297,81 +333,79 @@ body {
      display: flex;
      /* justify-content: center; */
  }
- footer {
-    padding-top: 210px;
-    min-height: 565px;
-    background: url("/wwwroot/img/bg-footer.png") no-repeat;
-    background-size: cover;
-  }
-  footer p {
-    color: #3a3864;
-    font-size: 25px;
-    line-height: 28px;
-    font-weight: 400;
-  }
-  footer ul li {
-    line-height: 28px;
-  }
+ footer{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: "DroidArabicKufiRegular";
+}
+footer {
+    position: relative;
+  padding-top: 210px;
+  max-height: 565px;
+  background-size: cover;
+  bottom: 0px;
+  left: 0px;
   
-  footer ul li a {
-    color: #3a3864;
-    font-size: 16px;
-    font-weight: 600;
-  }
-  
-  footer ul li a:hover {
-    color: #006dff;
-  }
-  
-  footer .title {
-    color: #100f45;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 22px;
-    text-transform: uppercase;
-  }
-  
-  footer .logo {
-    padding-left: 0;
-  }
-  
-  footer .logo img {
-    max-width: 208px;
-    margin-bottom: 22px;
-  }
-  
-  footer .inside-column {
-    padding-right: 100px;
-  }
-  
-  footer .inside {
-    padding-right: 60px;
-  }
-  
-  footer .footer-menu-wrap {
-    margin-bottom: 85px;
-  }
-  
-  footer .footer-social-wrapper {
-    padding-left: 71px;
-  }
-  
-  .footer-social-wrapper {
-    text-align: left;
-  }
-  
-  .footer-social-wrapper img {
-    max-width: 18px;
-  }
-  
-  .footer-social-wrapper a {
-    margin-left: 0;
-  }
-  
-  .footer-social-wrapper a:not(:last-child) {
-    margin-left: 14px;
-  }
-  
-  .footer-social-wrapper a:hover svg path {
-    fill: #006dff;
-  }
+}
+p {
+  color: #3a3864;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+footer ul li {
+  line-height: 28px;
+}
+
+footer ul li a {
+  color: #3a3864;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+footer ul li a:hover {
+  color: #006dff;
+}
+
+footer .title {
+  color: #100f45;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+
+
+footer .inside-column {
+  padding-right: 100px;
+}
+
+footer .inside {
+  padding-right: 60px;
+}
+
+footer .footer-menu-wrap {
+  margin-bottom: 85px;
+}
+
+footer .footer-social-wrapper {
+  padding-left: 71px;
+}
+
+.footer-social-wrapper {
+  text-align: left;
+}
+
+
+
+.footer-social-wrapper a {
+  margin-left: 0;
+}
+
+.footer-social-wrapper a:not(:last-child) {
+  margin-left: 14px;
+}

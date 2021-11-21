@@ -55,58 +55,54 @@
     />
 
 </head>
-<body>
-    <header id="header" class="blue-brd-btn">
-        <div class="container" style="margin-right: 10px">
-          <div
-            class="align-items-center"
-            style="padding: -10px; margin-right: -30px"
-          >
-            <div class="col-xl-3 col-lg-2 col-md-12" id="logo">
-              <h1>Speedline</h1>
-            </div>
-            <div class="col-xl-9 col-lg-9 col-md-12 text-right">
-              <!--===================== Header Block ========================-->
-
-              <div
-                style="
-                  margin-left: -300px;
-                  margin-top: -5px;
-                  padding-right: 40px;
-                "
-              >
-                <ul class="nav-menu list-unstyled list-inline">
-                  <li class="list-inline-item">
-                    <a href="/index.html">الرئيسية<span>-</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="/Offers/index.html">العروض<span>-</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="/Agents/index.html">الوكلاء<span>-</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="/Contact/index.html"> تواصل معنا<span>-</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="/About/index.html">من نحن<span>-</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      style="color: white"
-                      href="/Login/index.html"
-                      ><i class="fas fa-user-plus"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-
-              <!--===================== End of Header Block ========================-->
-            </div>
-          </div>
+<body  dir="rtl">
+  <header id="header">
+    <div class="container" style="margin-right: 10px">
+      <div
+        class="align-items-center"
+        style="padding: -10px; margin-right: -30px"
+      >
+        <div class="col-xl-3 col-lg-2 col-md-12" id="logo">
+          <h3>Speedline</h3>
         </div>
-      </header>
+        <div class="col-xl-9 col-lg-9 col-md-12 text-right">
+          <!--===================== Header Block ========================-->
+
+          <div
+            style="margin-left: -300px; margin-top: -5px; padding-right: 40px"
+          >
+            <ul class="nav-menu list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a href="/index.html">الرئيسية<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/Offers/index.html"> العروض<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/Agents/index.html">الوكلاء<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/Contact/index.html"> تواصل معنا<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/About/index.html">من نحن<span>-</span></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="color: white"
+                  href="/Login/index.html"
+                  ><i class="fas fa-user-plus"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <!--===================== End of Header Block ========================-->
+        </div>
+      </div>
+    </div>
+  </header>
     <div class="first-section" style="background: url(../wwwroot/css/img/first-section-bg.png) ;" >
                     <div class="text" >
                         <h1>العروض</h1>
@@ -119,6 +115,10 @@
                 </div>
             </div>
         
+        
+
+
+
 
 <div class="price-plan-block" style="background: url('../wwwroot/css/img/background-price-block.png') no-repeat center;">
 <div class="container">
@@ -163,7 +163,7 @@
     </div>
 </div>
 </div>
-<footer class="border-top footer text-muted">
+<footer class="border-top footer text-muted" id="footerStyle" style="background-image: url(../wwwroot/css/img/bg-footer.png);">
   <div class="container">
     <div class="row footer-menu-wrap">
       <br />
@@ -173,12 +173,10 @@
       <div class="col-xl-4 col-lg-4 col-md-6 col-12">
         <div class="logo l" style="margin-top: -20px">
           <h3>Speedline</h3>
-
           <p style="margin-top: -10px;   color: #3a3864;
           font-size: 16px;
           line-height: 28px;
-          font-weight: 400;
-          font-family: DroidArabicKufiRegular">
+          font-weight: 400;">
             تقدم شركة سبيد لاين للاتصالات خدمات مميزة ومتميزة للمصالح
             التجارية والافراد والشركات حيث تعمل الشركة في بيع وتاجير خطوط
             الهاتف الخلوي والارضي والانترنت البيتي ولجميع المناطق .
@@ -253,6 +251,27 @@
     </div>
   </div>
 </footer>
-       
+<script>
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      document.getElementById("header").style.background = "#0030ff";
+      document.getElementById("header").style.background =
+        "linear-gradient(to bottom, #0030ff 0%, #006dff 100%)";
+      document
+        .getElementById("header")
+        .getElementsByClassName("nav-menu").style.padding = "43px 21px";
+    } else {
+      document.getElementById("header").style =
+        "right: 0, width: 100%,z-index: 999,position: fixed,transition: 0.2s linear";
+    }
+  }
+</script>    
 </body>
 </html>
