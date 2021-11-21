@@ -1,0 +1,912 @@
+/*=================================
+=            02. Reset            =
+=================================*/
+*,
+html,
+body {
+  font-family: "DroidArabicKufiRegular";
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: "DroidArabicKufiRegular";
+}
+
+/* 01. Global Style
+   ==================================== */
+body {
+  font-family: "DroidArabicKufiRegular";
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 51px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a {
+  transition: 0.2s linear;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  color: #3a3864;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.blue-brd-btn {
+  color: #006dff;
+  padding: 14px 25px;
+  border: 2px solid #006dff;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
+  display: inline-block;
+  font-family: "DroidArabicKufiRegular";
+  transition: 0.2s linear;
+}
+
+.blue-brd-btn:hover {
+  background: #006dff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.see-brd-btn {
+  color: #fff;
+  padding: 14px 34px;
+  display: inline-block;
+  border: 2px solid #006dff;
+  font-size: 15px;
+  text-align: center;
+  background: #006dff;
+  cursor: pointer;
+  font-family: "DroidArabicKufiRegular";
+  transition: 0.2s linear;
+}
+
+.see-brd-btn:hover {
+  background: #110f46;
+  border: 2px solid #110f46;
+  color: #fff;
+  text-decoration: none;
+}
+
+.h2-main {
+  color: #131149;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 51px;
+  margin-bottom: 20px;
+  margin-right: -780px;
+}
+/* 03. Text Head
+   ==================================== */
+.text-head h5 {
+  font-size: 18px;
+  color: #006dff;
+  margin-bottom: 25px;
+}
+
+.animatedParent {
+  overflow: hidden;
+}
+/*=====  End of 03. Base Style  ======*/
+/*========================================
+=            04. Header Style            =
+========================================*/
+
+/* 01. Header
+   ==================================== */
+header {
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  transition: 0.2s linear;
+}
+
+header .blue-brd-btn {
+  margin-right: 13px;
+  font-family: "DroidArabicKufiRegular";
+  display: inline-block;
+}
+
+header .header-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header .nav-menu a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  transition: 0.2s linear;
+}
+
+header .nav-menu a:hover {
+  color: #006dff;
+}
+
+header .nav-menu span {
+  color: #006dff;
+  margin-right: 3px;
+  font-weight: 700;
+}
+
+header .nav-menu li {
+  position: relative;
+  padding: 43px 21px;
+  list-style: none;
+  transition: 0.2s linear;
+}
+
+header .nav-menu li:not(:last-child) {
+  margin-left: 0;
+}
+
+header .nav-menu li.top-sub-menu:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #190a2e 0%, #281643 100%);
+}
+
+header .nav-menu li.top-sub-menu:hover > a {
+  color: #006dff;
+}
+
+header .nav-menu li.top-sub-menu:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  background: linear-gradient(to bottom, #281643 0%, #3b2a5a 100%);
+}
+
+header .nav-menu .sub-menu {
+  top: 100%;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  padding: 12px 0 17px 0;
+  text-align: right;
+  z-index: 9;
+  position: absolute;
+  transition: 0.2s linear;
+}
+
+header .nav-menu .sub-menu li {
+  padding: 0;
+}
+
+header .nav-menu .sub-menu li a {
+  color: #fff;
+  display: block;
+  padding: 0 19px;
+}
+
+header .nav-menu .sub-menu li a:hover {
+  color: #006dff;
+}
+
+header .nav-menu .sub-menu li:not(:last-child) {
+  margin-bottom: 17px;
+}
+
+header .logo {
+  max-width: 208px;
+  margin-top: 1em;
+}
+
+header .logo-fixed {
+  display: none;
+}
+
+header.fixed {
+  background: #0030ff;
+  background: linear-gradient(to bottom, #0030ff 0%, #006dff 100%);
+}
+
+header.fixed .nav-menu li {
+  padding: 43px 21px;
+}
+
+header.fixed .nav-menu .sub-menu li {
+  padding: 0;
+}
+
+header .mobile-btn {
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: none;
+}
+
+header .mobile-btn.active span {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+header .mobile-btn.active span:before {
+  margin-top: 0;
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+header .mobile-btn.active span:after {
+  margin-top: 0;
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+header .mobile-btn span {
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+  transition: 0.2s linear;
+}
+
+header .mobile-btn span:before,
+header .mobile-btn span:after {
+  content: "";
+  position: absolute;
+  transition: 0.2s linear;
+}
+
+header .mobile-btn span:before {
+  margin-top: -10px;
+}
+
+header .mobile-btn span:after {
+  margin-top: 10px;
+}
+
+header .mobile-btn span,
+header .mobile-btn span:before,
+header .mobile-btn span:after {
+  width: 35px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+}
+/* 02. Header Type 2
+   ==================================== */
+.header-type-2 {
+  top: 0;
+  background: #0030ff;
+  background: linear-gradient(to bottom, #0030ff 0%, #006dff 100%);
+}
+
+.header-type-2 .nav-menu li {
+  padding: 36px 21px;
+}
+
+.header-type-2 .blue-brd-btn {
+  margin-right: 12px;
+}
+
+.margin-top {
+  margin-top: 165px;
+}
+/*=====  End of 04. Header Style  ======*/
+/*==========================================
+=            05. Elements Style            =
+==========================================*/
+
+/* 01. Reasons Block
+   ==================================== */
+.reasons-block {
+  margin-bottom: 64px;
+}
+
+.reasons-block h2 {
+  /* padding-left: 50px; */
+}
+
+.reasons-block .reasons-desc-div h4 {
+  color: #131149;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  /*padding-left: 50px;*/
+}
+
+.reasons-block .reasons-desc-div p {
+  font-size: 14px;
+  line-height: 22px;
+  /*padding-left: 15px;*/
+}
+
+.reasons-block .reasons-icon-div {
+  width: 71px;
+  /* padding-left: 20px; */
+  height: 71px;
+  margin-left: 45px;
+  background-color: #fff;
+  border-radius: 100%;
+  line-height: 93px;
+  -ms-flex: 0 0 71px;
+  flex: 0 0 71px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 3px 5px 15px 1px rgba(6, 180, 253, 0.13);
+}
+.row {
+  margin-right: 30px;
+}
+.reasons-block .reasons-icon-div img {
+  max-width: 40px;
+}
+
+.reasons-block .reason-block-cont {
+  display: flex;
+
+  align-items: center;
+  margin: 25px 0 72px 0;
+}
+.ra {
+  margin-top: -220px;
+  display: flex;
+  justify-content: center;
+  padding-inline: -50px;
+  line-height: -5px;
+  /* margin-left: -100px; */
+  margin-right: 350px;
+  border: -50px;
+  /* line-height: 10px; */
+  border-spacing: -100px;
+  /* transform: translateX(0); */
+}
+/* 02. Philosophy Block
+   ==================================== */
+.philosophy-block {
+  margin-bottom: 60px;
+}
+
+.philosophy-block .philosophy-div1 {
+  min-height: 405px;
+  width: 50%;
+  background: url("/wwwroot/img/about-img-1.png") no-repeat;
+  background-size: 77%;
+  position: relative;
+}
+
+.philosophy-block.animatedParent {
+  overflow: inherit;
+}
+
+.philosophy-block .philosophy-div2 {
+  padding: 46px 76px 0 0;
+}
+
+.philosophy-block .philosophy-div2 h4 {
+  font-size: 18px;
+  color: #006dff;
+  font-weight: 700;
+  line-height: 11px;
+  margin-bottom: 20px;
+}
+
+.philosophy-block .philosophy-div2 .h2-main {
+  max-width: 290px;
+  margin-bottom: 12px;
+  margin-right: 0px;
+}
+
+.philosophy-block .philosophy-div2 p {
+  font-size: 16px;
+  line-height: 28px;
+  padding-left: 150px;
+  margin-bottom: 10px;
+}
+
+.philosophy-block .coin-speacial-block {
+  width: 317px;
+  background: #110f46;
+  position: absolute;
+  left: 68px;
+  top: 203px;
+  border: 16px solid #fff;
+  padding: 32px 5px 30px 37px;
+}
+
+.philosophy-block .coin-speacial-block img {
+  max-width: 54px;
+}
+
+.philosophy-block .coin-speacial-block h4 {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 23px;
+  margin-bottom: 5px;
+}
+
+.philosophy-block .coin-speacial-block p {
+  font-size: 16px;
+  color: #abaae6;
+  line-height: 28px;
+  margin-bottom: 26px;
+}
+
+.philosophy-block .coin-speacial-block span {
+  display: inline-block;
+  color: #006dff;
+  font-size: 36px;
+}
+
+.philosophy-block .see-brd-btn {
+  margin-top: 13px;
+}
+
+.philosophy-block .animatedParent {
+  overflow: inherit;
+}
+/* 03. Iphone Block
+   ==================================== */
+.iphone-block {
+  margin-bottom: 31px;
+  padding: 148px 0 278px 0;
+  background: url("/wwwroot/img/iphone-background.png") no-repeat center;
+  background-size: cover;
+}
+
+.iphone-block .icon {
+  width: 72px;
+  height: 72px;
+  text-align: center;
+  line-height: 103px;
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 100%;
+  box-shadow: 3px 5px 15px 1px rgba(121, 105, 230, 0.13);
+  background-color: #fff;
+}
+
+.iphone-block .icon img {
+  max-width: 45px;
+}
+
+.iphone-block p {
+  margin-bottom: 22px;
+}
+
+.iphone-block h2 {
+  margin-bottom: 10px;
+  margin-right: 0;
+}
+
+.iphone-block.animatedParent {
+  overflow: initial;
+}
+
+/* 05. Price Plan Block
+   ==================================== */
+.price-plan-block {
+  margin-bottom: 10px;
+  padding: 20px 0 234px 0;
+  background: url("/wwwroot/img/background-price-block.png") no-repeat center;
+  background-size: cover;
+}
+
+.price-plan-block .h2-main {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-bottom: 51px;
+  margin-right: 0;
+  margin-top: 20px;
+}
+
+.price-plan-block .price-plan-icon-wrap {
+  max-width: 48%;
+  height: 75px;
+  margin-bottom: 10px;
+}
+
+.price-plan-block .price-plan-item-inside {
+  padding: 51px 35px 26px 35px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+.price-plan-block .price-plan-item-inside h4 {
+  color: #fdfdfe;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.price-plan-block .price-plan-item-inside h3 {
+  color: #006dff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 21px;
+}
+
+.price-plan-block .custom {
+  padding-right: 0;
+  -ms-flex: 0 0 24%;
+  flex: 0 0 24%;
+  max-width: 24%;
+  padding-left: 0;
+}
+
+.price-plan-block .see-brd-btn {
+  padding: 14px 45px;
+}
+
+.price-plan-block .price-plan-text-1 {
+  color: #111;
+  line-height: 1.5;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #323260;
+  margin-bottom: 28px;
+}
+
+.price-plan-block .price-plan-text-2 {
+  color: #abaae6;
+  line-height: 1.7;
+  margin-bottom: 26px;
+}
+
+.owl-carousel .owl-item img {
+  height: 100%;
+}
+.owl-carousel.owl-rtl .owl-item {
+  float: left !important;
+}
+
+/*=====  End of 05. Elements Style  ======*/
+/*========================================
+=            06. Footer Style            =
+========================================*/
+/**
+ Navigation File
+
+ 01. Footer
+ 02. Copyright
+
+ */
+/* 01. Footer
+   ==================================== */
+footer {
+  padding-top: 210px;
+  min-height: 565px;
+  background: url("/wwwroot/img/bg-footer.png") no-repeat;
+  background-size: cover;
+}
+
+footer ul li {
+  line-height: 28px;
+}
+
+footer ul li a {
+  color: #3a3864;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+footer ul li a:hover {
+  color: #006dff;
+}
+
+footer .title {
+  color: #100f45;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+footer .logo {
+  padding-left: 0;
+}
+
+footer .logo img {
+  max-width: 208px;
+  margin-bottom: 22px;
+}
+
+footer .inside-column {
+  padding-right: 100px;
+}
+
+footer .inside {
+  padding-right: 60px;
+}
+
+footer .footer-menu-wrap {
+  margin-bottom: 85px;
+}
+
+footer .footer-social-wrapper {
+  padding-left: 71px;
+}
+
+.footer-social-wrapper {
+  text-align: left;
+}
+
+.footer-social-wrapper img {
+  max-width: 18px;
+}
+
+.footer-social-wrapper a {
+  margin-left: 0;
+}
+
+.footer-social-wrapper a:not(:last-child) {
+  margin-left: 14px;
+}
+
+.footer-social-wrapper a:hover svg path {
+  fill: #006dff;
+}
+/* 02. Copyright
+   ==================================== */
+.copyright {
+  padding: 14px 0;
+  background-color: #f1f5fb;
+}
+
+.copyright p {
+  font-size: 14px;
+  color: #9e9fb5;
+  font-weight: 600;
+}
+/*=====  End of 06. Footer Style  ======*/
+/*========================================
+=            07. Slider Style            =
+========================================*/
+/**
+ Navigation File
+
+ 01. Info block
+ 02. List
+ 03. Text
+
+ */
+/* 01. Info block
+   ==================================== */
+.courusel-container {
+  padding: 232px 0 135px;
+  position: relative;
+  margin-bottom: 86px;
+  background: url(../img/background-ar.png) no-repeat center;
+  background-size: cover;
+}
+
+.courusel-container .inside h1 {
+  margin-bottom: 50px;
+}
+
+.courusel-container .inside {
+  max-width: 560px;
+}
+
+.courusel-container .main-slider-logo-block {
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 156px;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.courusel-container .main-slider-logo-block img {
+  max-width: 140px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  margin: 3px;
+}
+
+.courusel-container:before {
+  content: "";
+  width: 2px;
+  height: 87px;
+  bottom: -25px;
+  right: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  display: inline-block;
+  background-color: #006dff;
+}
+
+#sync1 .item1 h1 {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 900;
+  line-height: 56px;
+}
+
+#sync1 .item1 p {
+  color: #abaae6;
+  line-height: 27px;
+  padding: 0 130px 0 10px;
+  margin: 17px 0 41px;
+  font-size: 18px;
+  border-right: 2px solid #006dff;
+}
+
+#sync1 .item1 .blue-brd-btn {
+  background: #006dff;
+  border: 2px solid #006dff;
+  color: #fff;
+  font-family: "DroidArabicKufiRegular";
+}
+
+#sync1 .item1 .blue-brd-btn:hover,
+#sync1 .item1 .blue-brd-btn:active {
+  background: #110f46;
+  border: 2px solid #110f46;
+}
+
+#sync1 .owl-dots {
+  display: none;
+}
+
+.owl-carousel {
+  cursor: url(../img/drag.png) 16 9, ew-resize;
+}
+
+.owl-theme .owl-nav [class*="owl-"] {
+  background: none;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: none;
+}
+
+#sync1.owl-theme {
+  position: relative;
+}
+
+#sync1.owl-theme .owl-next,
+#sync1.owl-theme .owl-prev {
+  width: 22px;
+  height: 40px;
+  margin-top: -70px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#sync1.owl-theme .owl-prev {
+  left: -77px;
+}
+
+#sync1.owl-theme .owl-next {
+  right: -77px;
+}
