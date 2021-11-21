@@ -22,7 +22,7 @@ function scrollFunction() {
 	document.getElementById("header").getElementsByClassName("nav-menu").style.padding="43px 21px";
   }  
   else{
-	document.getElementById("header").style= "right: 0, width: 100%,z-index: 999,position: fixed,transition: 0.2s linear";
+	document.getElementById("header").style= "right: 0, width: 100%,z-index: 999,position: fixed,transition: 0.2s linear, background-color: blue";
 	
   }
 }
