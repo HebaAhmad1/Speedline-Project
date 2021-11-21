@@ -52,6 +52,7 @@ body {
     z-index: 999;
     position: fixed;
     transition: 0.2s linear;
+    font-family: cursive;
   }
   
   header .blue-brd-btn {
@@ -195,7 +196,8 @@ body {
             margin-bottom: 33px;
             margin-right: 40px;
             margin-top: 130px;
-            font-size: 70px;
+            font-size: 50px;
+            font-family: cursive;
 
         }
 
@@ -206,8 +208,9 @@ body {
         }
 
         .photo{
-            margin-right: 850px;
+            margin-right: 700px;
             margin-top: -250px;
+            margin-left: 10px;
    
         }
         
