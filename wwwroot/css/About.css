@@ -136,6 +136,14 @@ body {
     font-size: 35px;
     color: #fff;
  }
+ #logo h3{
+    font-size: 24px;
+    color: white;
+    margin-top: 35px;
+    font-family: cursive;
+    margin-right: 25px;
+    font-weight: 0px;
+ }
  .blue-brd-btn{
     color: #fff;
     height: 90px;

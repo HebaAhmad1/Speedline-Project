@@ -24,7 +24,12 @@ body {
     cursor: pointer;
     transition: 0.2s linear;
   }
-
+  #logo h3{
+    font-size: 24px;
+    color: white;
+    margin-top: 35px;
+    font-family: cursive;
+ }
   header .blue-brd-btn {
     margin-right: 13px;
     font-family: "DroidArabicKufiRegular";

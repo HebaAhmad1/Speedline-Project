@@ -115,7 +115,6 @@ h2 {
 
 h3 {
   font-size: 36px;
-  font-weight: 700;
 }
 
 h4 {
@@ -247,7 +246,14 @@ header .nav-menu a {
   font-weight: 400;
   transition: 0.2s linear;
 }
-
+#logo h3{
+    font-size: 24px;
+    color: white;
+    margin-top: 35px;
+    font-family: cursive;
+    margin-right: 25px;
+    font-weight: 0px;
+ }
 header .nav-menu a:hover {
   color: #006dff;
 }
