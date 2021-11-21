@@ -129,20 +129,42 @@ body {
   #header .logo-fixed {
     display: none;
   }
-  
+  #logo{
+    display: flex;
+    justify-content:flex-end;
+    top: px;
+    font-size: 35px;
+    color: #fff;
+ }
+ .blue-brd-btn{
+    color: #fff;
+    height: 90px;
+    padding: 10px 34px;
+    display: inline-block;
+    border: 2px solid #006dff;
+    text-align: center;
+    background: #006dff;
+    cursor: pointer;
+    transition: 0.2s linear;
+  }
   header.fixed {
-    background-color: #0030ff;
-    background-color: linear-gradient(to bottom, #0030ff 0%, #006dff 100%);
+    background: #0030ff;
+    background: linear-gradient(to bottom, #0030ff 0%, #006dff 100%);
   }
   
   header.fixed .nav-menu li {
     padding: 43px 21px;
   }
-  
+#sync1 .item1 .blue-brd-btn:hover,
+#sync1 .item1 .blue-brd-btn:active {
+  background: #110f46;
+  border: 2px solid #110f46;
+}
   header.fixed .nav-menu .sub-menu li {
     padding: 0;
   }
   
+
 
  
 /* 01. First Section

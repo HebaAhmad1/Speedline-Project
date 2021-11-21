@@ -15,14 +15,13 @@ body {
   }
   .blue-brd-btn{
     color: #fff;
-    padding: 14px 34px;
+    height: 90px;
+    padding: 10px 34px;
     display: inline-block;
     border: 2px solid #006dff;
-    font-size: 15px;
     text-align: center;
     background: #006dff;
     cursor: pointer;
-    font-family: "DroidArabicKufiRegular";
     transition: 0.2s linear;
   }
 
@@ -148,7 +147,7 @@ body {
   #logo{
      display: flex;
      justify-content:flex-end;
-     top: 15px;
+     top: px;
      font-size: 35px;
      color: #fff;
   }
