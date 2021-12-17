@@ -1,3 +1,7 @@
+<?php
+$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
+ $results = mysqli_query($db, "SELECT * FROM agent"); 
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,39 +126,20 @@
 <div class="container">
 
 <div class="row ">
-<div class="col-xl-3 ">
-<div class="price-plan-item-inside">
-    <div class="price-plan-icon-wrap plan-item-icon-1">
-        <img class="price-plan-item-icon" src="../wwwroot/css/img/slider-logo-1.jpg" alt="images">
-    </div>
-    <p class="price-plan-text-1">اسم الوكيل</p>
-    </div>
-</div>
-
-<div class="col-xl-3 ">
-    <div class="price-plan-item-inside">
-        <div class="price-plan-icon-wrap plan-item-icon-1">
-            <img class="price-plan-item-icon" src="../wwwroot/css/img/slider-logo-2.jpg" alt="images">
-        </div>
-        <p class="price-plan-text-1">اسم الوكيل</p>
-        </div>
-    </div>
-    <div class="col-xl-3 ">
+  <div class="row ">
+    <?php while ($row = mysqli_fetch_array($results)) { ?>
+      <div class="col-xl-3 ">
         <div class="price-plan-item-inside">
-            <div class="price-plan-icon-wrap plan-item-icon-1">
-                <img class="price-plan-item-icon" src="../img/slider-logo-3.jpg" alt="images">
-            </div>
-            <p class="price-plan-text-1">اسم الوكيل</p>
+            <p class="price-plan-text-1"><?php echo $row['AgentName']; ?></p>
+            <h3><?php echo $row['discription']; ?></h3>
             </div>
         </div>
-        <div class="col-xl-3 ">
-            <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                    <img class="price-plan-item-icon" src="../wwwroot/css/img/slider-logo-4.jpg" alt="images">
-                </div>
-                <p class="price-plan-text-1">اسم الوكيل</p>
-                </div>
-            </div>
+      <?php } ?>
+  </div>
+
+
+
+      
            
             
             

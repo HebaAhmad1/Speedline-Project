@@ -75,31 +75,30 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
           <div
             style="margin-left: -300px; margin-top: -5px; padding-right: 40px"
           >
-            <ul class="nav-menu list-unstyled list-inline">
+          <ul class="nav-menu list-unstyled list-inline">
               <li class="list-inline-item">
-                <a href="/index.html">الرئيسية<span>-</span></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="/Offers/index.html"> العروض<span>-</span></a>
+                <a href="../index.php">الرئيسية<span>-</span></a>
               </li>
               <li class="list-inline-item">
-                <a href="/Agents/index.html">الوكلاء<span>-</span></a>
+                <a href="../Offers/index.php">العروض<span>-</span></a>
               </li>
               <li class="list-inline-item">
-                <a href="/Contact/index.html"> تواصل معنا<span>-</span></a>
+                <a href="../Agents/index.php">الوكلاء<span>-</span></a>
               </li>
               <li class="list-inline-item">
-                <a href="/About/index.html">من نحن<span>-</span></a>
+                <a href="../Contact/index.php"> تواصل معنا<span>-</span></a>
               </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  style="color: white"
-                  href="/Login/index.html"
-                  ><i class="fas fa-user-plus"></i
-                ></a>
+              <li class="list-inline-item">
+                <a href="../About/index.php">من نحن<span>-</span></a>
               </li>
-            </ul>
+              <a
+                class="nav-link"
+                style="color: white"
+                href="../Login/login1.php"
+                ><i class="fas fa-user-plus"></i
+              ></a>
+            </li>
+          </ul>
           </div>
 
           <!--===================== End of Header Block ========================-->
@@ -107,49 +106,76 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
       </div>
     </div>
   </header>
+
+  <div class="first-section">
+      <div class="container">
+        <div class="row">
+          <div id="sync1" class="owl-carousel owl-theme">
+            <div class="text">
+              <h1>إضافة عروض</h1>
+              <span class="d-flex align-items-center">
+                <b class="a1" style="color: white"
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;أهلا وسهلا بكم</b
+                >
+                <b class="line">&nbsp;</b>
+              </span>
+            </div>
+          </div>
+          <div
+            class="
+              col-xl-6 col-lg-6 col-md-6 col-12
+              animated
+              bounceInRight
+              position-relative
+            "
+          >
+            <img src="../wwwroot/img/about-img-1.png" alt="about-img" />
+          </div>
+        </div>
+      </div>
+      <div class="cloud">&nbsp;</div>
+      <div class="cloud-two">&nbsp;</div>
+      <div class="mini-cloud"></div>
+      <div class="mini-cloud two"></div>
+      <div class="mini-cloud three"></div>
+    </div>
 <div class="price-plan-block" style="background: url('../wwwroot/css/img/background-price-block.png') no-repeat center;">
 <div class="container">
    
-    <div class="row ">
-      <?php while ($row = mysqli_fetch_array($results)) { ?>
-        <div class="col-xl-3 col-lg-6 col-md-6 custom">
-            <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                    <img class="price-plan-item-icon" src="../wwwroot/css/img/shop-icon1.png" alt="images">
-                </div>
-                <p class="price-plan-text-1"><?php echo $row['description']; ?></p>
-                <h3><?php echo $row['price']; ?></h3>
+   <!--===================== Price Plan Wrapper ========================-->
+   <div class="price-plan-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <h2 class="h2-main">عروضنا</h2>
             </div>
+          </div>
+          <div class="row justify-content-center animatedParent">
+
+            <div class="row ">
+              <?php while ($row =mysqli_fetch_array($results)) { ?>
+               
+                <div class="col-xl-3 col-lg-6 col-md-6 custom">
+                    <div class="price-plan-item-inside">
+                        <div class="price-plan-icon-wrap plan-item-icon-1">
+                            <img class="price-plan-item-icon" src="./wwwroot/img/shop-icon1.png" alt="images">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="price-plan-text-1"><?php echo $row['description']; ?></p>
+                        <h3><?php echo $row['price']; ?></h3>
+                    </div>
+                </div>
+                <?php } ?>
+              
+            </div>
+
+       
+            
+          </div>
         </div>
-        <?php } ?>
-        <!-- <div class="col-xl-3 col-lg-6 col-md-6 custom">
-            <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                    <img class="price-plan-item-icon" src="../wwwroot/css/img/shop-icon1.png" alt="images">
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-6 custom">
-            <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                    <img class="price-plan-item-icon" src="../wwwroot/css/img/shop-icon1.png" alt="images">
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-6 custom">
-            <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                    <img class="price-plan-item-icon" src="../wwwroot/css/img/shop-icon1.png" alt="images">
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-            </div>
-        </div> -->
-    </div>
+      </div>
+      <!--===================== End of Price Plan Wrapper ========================-->
 </div>
 </div>
 <footer class="border-top footer text-muted" id="footerStyle" style="background-image: url(../wwwroot/css/img/bg-footer.png);">

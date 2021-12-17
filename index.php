@@ -1,3 +1,7 @@
+<?php
+$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
+ $results = mysqli_query($db, "SELECT * FROM info ORDER BY id DESC LIMIT 10"); 
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -312,112 +316,27 @@
             </div>
           </div>
           <div class="row justify-content-center animatedParent">
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
+
+            <div class="row ">
+              <?php while ($row =mysqli_fetch_array($results)) { ?>
+               
+                <div class="col-xl-3 col-lg-6 col-md-6 custom">
+                    <div class="price-plan-item-inside">
+                        <div class="price-plan-icon-wrap plan-item-icon-1">
+                            <img class="price-plan-item-icon" src="./wwwroot/img/shop-icon1.png" alt="images">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="price-plan-text-1"><?php echo $row['description']; ?></p>
+                        <h3><?php echo $row['price']; ?></h3>
+                    </div>
                 </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
+                <?php } ?>
+              
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-            <div class="custom col-xl-3 col-lg-6 col-md-6">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center animatedParent">
-            <div class="custom col-xl-3 col-lg-6 col-md-6">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
+
+       
+            
           </div>
         </div>
       </div>

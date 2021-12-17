@@ -1,3 +1,29 @@
+<?php
+session_start();
+	$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
+
+	// initialize variables
+	$name = "";
+	$email = "";
+    $telNum=0;
+    $company= "";
+    $message= "";
+	$id = 0;
+
+
+	if (isset($_POST['submit'])) {
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+        $telNum=$_POST['telNum'];
+        $company= $_POST['company'];
+        $message= $_POST['message'];
+
+		mysqli_query($db, "INSERT INTO contact (name,email,telNum,company,message) VALUES ('$name', '$email','$telNum','$company','$message')"); 
+    $_SESSION['message'] = "Offer saved"; 
+    header('location: index.php');
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,29 +154,29 @@
                     <div class="col-xl-8 col-lg-8 col-12 pr-lg-0" style="padding:0px">
                         <div class="bg">
                             <h4>أرسل لنا رسالة</h4>
-                            <form class="custom-form" action="/index.html" method="get">
+                            <form class="custom-form" action="" method="post">
                                 <div class="form-group">
-                                    <label for="Name">الاسم</label>
-                                    <input for="Name" type="text" class="form-control" required>
+                                    <label name="name">الاسم</label>
+                                    <input name="name" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Email">الايميل</label>
-                                    <input for="Email" type="email" class="form-control" required>
+                                    <label name="email">الايميل</label>
+                                    <input name="email" type="email" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="PhoneNumber">رقم الهاتف</label>
-                                    <input for="PhoneNumber" type="text" class="form-control" required>
+                                    <label name="telNum">رقم الهاتف</label>
+                                    <input name="telNum" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Company">الشركة</label>
-                                    <input for="Company" type="text" class="form-control">
+                                    <label name="company">الشركة</label>
+                                    <input name="company" type="text" class="form-control">
                                 </div>
                                 <div class="form-group last">
-                                    <label for="Message">الرسالة</label>
-                                    <textarea for="Message"></textarea>
+                                    <label name="message">الرسالة</label>
+                                    <textarea name="message"></textarea>
                                 </div>
                                 <div class="text-right">
-                                    <button type="submit" class="see-brd-btn">أرسل</button>
+                                    <button type="submit" name="submit" class="see-brd-btn">أرسل</button>
                                 </div>
                             </form>
                         </div>
