@@ -13,7 +13,7 @@ if(isset($_POST['Login'])) {
 
 	if($user) {
 		$_SESSION['Login'] = 1;
-		header("Location: ../wwwroot/alaa.html");
+		header("Location: ../wwwroot/alaa.php");
 	}else {
 		echo 'Username or Password Incorrect, Please try again';
 	}

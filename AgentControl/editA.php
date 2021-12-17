@@ -4,12 +4,12 @@
     
 if (isset($_POST['update'])) {
 	$id = $_POST['id'];
-	$description = $_POST['description'];
-	$price = $_POST['price'];
+	$AgentName = $_POST['AgentName'];
+	$discription = $_POST['discription'];
 
-	mysqli_query($db, "UPDATE info SET description='$description', price='$price' WHERE id=$id");
+	mysqli_query($db, "UPDATE agent SET AgentName='$AgentName', discription='$discription' WHERE id=$id");
 	$_SESSION['message'] = "Address updated!"; 
-	header('location: offerList.php');
+	header('location: agentList.php');
 }
 ?>
 ?>
@@ -19,7 +19,7 @@ if (isset($_POST['update'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>تعديل عروض</title>
+    <title>تعديل الوكلاء</title>
     <link rel="stylesheet" href="Create.css" />
     <link
       rel="stylesheet"
@@ -126,7 +126,7 @@ if (isset($_POST['update'])) {
         <div class="row">
           <div id="sync1" class="owl-carousel owl-theme">
             <div class="text">
-              <h1>تعديل عروض</h1>
+              <h1>تعديل الوكلاء</h1>
               <span class="d-flex align-items-center">
                 <b class="a1" style="color: white"
                   >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;أهلا وسهلا بكم</b
@@ -154,7 +154,7 @@ if (isset($_POST['update'])) {
       <div class="mini-cloud three"></div>
     </div>
     <h2 class="text-info" style="padding: 50px; margin-top: -150px">
-        تعديل العرض
+تعديل الوكيل
     </h2>
     <form method="post" action="">
       <div class="container">
@@ -162,11 +162,11 @@ if (isset($_POST['update'])) {
         <div class="form-group row">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
           <div class="col-2">
-            <label name="description" class="col-form-label">وصف العرض</label>
+            <label name="AgentName" class="col-form-label"> اسم الوكيل</label>
           </div>
           <div class="col-5">
             <input
-              name="description"
+              name="AgentName"
               type="text"
               class="col-form-label"
               required
@@ -176,10 +176,10 @@ if (isset($_POST['update'])) {
         </div>
         <div class="form-group">
           <div class="col-2">
-            <label name="price" class="col-form-label">السعر</label>
+            <label name="discription" class="col-form-label">مكان الوكيل</label>
           </div>
           <div class="col-5">
-            <input name="price" type="text" class="col-form-label" required />
+            <input name="discription" type="text" class="col-form-label" required />
           </div>
           <!-- <span asp-validation-for="Price" class="text-danger"></span> -->
         </div>

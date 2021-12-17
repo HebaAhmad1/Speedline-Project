@@ -1,3 +1,7 @@
+<?php
+$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
+ $results = mysqli_query($db, "SELECT * FROM info"); 
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,31 +75,31 @@
           <div
             style="margin-left: -300px; margin-top: -5px; padding-right: 40px"
           >
-          <ul class="nav-menu list-unstyled list-inline">
+            <ul class="nav-menu list-unstyled list-inline">
               <li class="list-inline-item">
-                <a href="../index.php">الرئيسية<span>-</span></a>
+                <a href="/index.html">الرئيسية<span>-</span></a>
               </li>
               <li class="list-inline-item">
-                <a href="../Offers/index.php">العروض<span>-</span></a>
+                <a href="/Offers/index.html"> العروض<span>-</span></a>
               </li>
               <li class="list-inline-item">
-                <a href="../Agents/index.php">الوكلاء<span>-</span></a>
+                <a href="/Agents/index.html">الوكلاء<span>-</span></a>
               </li>
               <li class="list-inline-item">
-                <a href="../Contact/index.php"> تواصل معنا<span>-</span></a>
+                <a href="/Contact/index.html"> تواصل معنا<span>-</span></a>
               </li>
               <li class="list-inline-item">
-                <a href="../About/index.php">من نحن<span>-</span></a>
+                <a href="/About/index.html">من نحن<span>-</span></a>
               </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                style="color: white"
-                href="../Login/login1.php"
-                ><i class="fas fa-user-plus"></i
-              ></a>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="color: white"
+                  href="/Login/index.html"
+                  ><i class="fas fa-user-plus"></i
+                ></a>
+              </li>
+            </ul>
           </div>
 
           <!--===================== End of Header Block ========================-->
@@ -103,28 +107,22 @@
       </div>
     </div>
   </header>
-    <div class="first-section" style="background: url(../wwwroot/css/img/first-section-bg.png) ;" >
-                    <div class="text" >
-                        <h1>العروض</h1>
-                        <span >
-                            أهلاً وسهلاً بك
-                        </span>
-                    </div>
-                <div class="photo">
-                    <img src="../wwwroot/css/img/about-img-1.png" alt="about-img" >
-                </div>
-            </div>
-        
-        
-
-
-
-
 <div class="price-plan-block" style="background: url('../wwwroot/css/img/background-price-block.png') no-repeat center;">
 <div class="container">
    
     <div class="row ">
+      <?php while ($row = mysqli_fetch_array($results)) { ?>
         <div class="col-xl-3 col-lg-6 col-md-6 custom">
+            <div class="price-plan-item-inside">
+                <div class="price-plan-icon-wrap plan-item-icon-1">
+                    <img class="price-plan-item-icon" src="../wwwroot/css/img/shop-icon1.png" alt="images">
+                </div>
+                <p class="price-plan-text-1"><?php echo $row['description']; ?></p>
+                <h3><?php echo $row['price']; ?></h3>
+            </div>
+        </div>
+        <?php } ?>
+        <!-- <div class="col-xl-3 col-lg-6 col-md-6 custom">
             <div class="price-plan-item-inside">
                 <div class="price-plan-icon-wrap plan-item-icon-1">
                     <img class="price-plan-item-icon" src="../wwwroot/css/img/shop-icon1.png" alt="images">
@@ -150,16 +148,7 @@
                 <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
                 <h3>₪499.00</h3>
             </div>
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-6 custom">
-            <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                    <img class="price-plan-item-icon" src="../wwwroot/css/img/shop-icon1.png" alt="images">
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-            </div>
-        </div>
+        </div> -->
     </div>
 </div>
 </div>

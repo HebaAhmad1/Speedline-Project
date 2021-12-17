@@ -78,19 +78,25 @@
               >
               <ul class="nav-menu list-unstyled list-inline">
                 <li class="list-inline-item">
-                  <a href="/Speedline-Project/index.html">الرئيسية<span>-</span></a>
+                  <a href="../index.php">الرئيسية<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="../Speedline-Project/Offers/index.html">العروض<span>-</span></a>
+                  <a href="../Offers/index.php">العروض<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="../Speedline-Project/Agents/index.html">الوكلاء<span>-</span></a>
+                  <a href="../Agents/index.php">الوكلاء<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="../Speedline-Project/Contact/index.html"> تواصل معنا<span>-</span></a>
+                  <a href="../Contact/index.php"> تواصل معنا<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="../Speedline-Project/About/index.html">من نحن<span>-</span></a>
+                  <a href="../About/index.php">من نحن<span>-</span></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="../Contact/index.php"> التحكم بالعروض<span>-</span></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="../Contact/index.php"> التحكم بالوكلاء<span>-</span></a>
                 </li>
                   <li class="nav-item">
                     <a class="nav-link" href="../Login/logout.php"> <i class="fas fa-sign-out-alt"></i>  خروج</a>

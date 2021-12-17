@@ -1,25 +1,16 @@
-<?php 
-    $id = $_GET['edit'];
-    $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
-    
-if (isset($_POST['update'])) {
-	$id = $_POST['id'];
-	$description = $_POST['description'];
-	$price = $_POST['price'];
 
-	mysqli_query($db, "UPDATE info SET description='$description', price='$price' WHERE id=$id");
-	$_SESSION['message'] = "Address updated!"; 
-	header('location: offerList.php');
-}
+<?php
+$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
+$results = mysqli_query($db, "SELECT * FROM agent"); 
 ?>
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>تعديل عروض</title>
+    <title> اضافو وكلاء</title>
     <link rel="stylesheet" href="Create.css" />
     <link
       rel="stylesheet"
@@ -126,7 +117,7 @@ if (isset($_POST['update'])) {
         <div class="row">
           <div id="sync1" class="owl-carousel owl-theme">
             <div class="text">
-              <h1>تعديل عروض</h1>
+              <h1> العروض</h1>
               <span class="d-flex align-items-center">
                 <b class="a1" style="color: white"
                   >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;أهلا وسهلا بكم</b
@@ -154,48 +145,40 @@ if (isset($_POST['update'])) {
       <div class="mini-cloud three"></div>
     </div>
     <h2 class="text-info" style="padding: 50px; margin-top: -150px">
-        تعديل العرض
+       الوكلاء
     </h2>
-    <form method="post" action="">
-      <div class="container">
-        <div class="text-danger"></div>
-        <div class="form-group row">
-        <input type="hidden" name="id" value="<?php echo $id; ?>">
-          <div class="col-2">
-            <label name="description" class="col-form-label">وصف العرض</label>
-          </div>
-          <div class="col-5">
-            <input
-              name="description"
-              type="text"
-              class="col-form-label"
-              required
-            />
-          </div>
-          <!-- <span asp-validation-for="DescriptionAr" class="text-danger"></span> -->
-        </div>
-        <div class="form-group">
-          <div class="col-2">
-            <label name="price" class="col-form-label">السعر</label>
-          </div>
-          <div class="col-5">
-            <input name="price" type="text" class="col-form-label" required />
-          </div>
-          <!-- <span asp-validation-for="Price" class="text-danger"></span> -->
-        </div>
-        <div class="form-group row">
-          <div class="col-5 offset-2">
-            <div class="form-group">
-                <button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
-            </div>
+    
 
-            <!-- <div>
-                        <a asp-action="Index">الرجوع إلى القائمة</a>
-                    </div> -->
-          </div>
-        </div>
-      </div>
-    </form>
+    <table class="table table-striped border">
+        <thead>
+            <tr class="table-secondary">
+                <th>AgentName</th>
+                <th>discription</th>
+                <th colspan="2">Action</th>
+            </tr>
+        </thead>
+        
+        <?php while ($row = mysqli_fetch_array($results)) { ?>
+            <tr>
+                <td><?php echo $row['AgentName']; ?></td>
+                <td><?php echo $row['discription']; ?></td>
+                <td>
+                    <a href="editA.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
+                </td>
+                <td>
+                    <a href="deleteA.php?del=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
+                </td>
+            </tr>
+        <?php } ?>
+    </table>
+    
+    <form>
+    
+
+
+
+
+
     <footer class="border-top footer text-muted">
       <div class="container">
         <div class="row footer-menu-wrap">
