@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>عن الشركة</title>
-    <link rel="stylesheet" href="/wwwroot/css/About.css" />
+    <link rel="stylesheet" href="../wwwroot/css/About.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -70,31 +70,30 @@
             <div
               style="margin-left: -300px; margin-top: -5px; padding-right: 40px"
             >
-              <ul class="nav-menu list-unstyled list-inline">
-                <li class="list-inline-item">
-                  <a href="/index.html">الرئيسية<span>-</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="/Offers/index.html"> العروض<span>-</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="/Agents/index.html">الوكلاء<span>-</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="/Contact/index.html"> تواصل معنا<span>-</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="/About/index.html">من نحن<span>-</span></a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    style="color: white"
-                    href="/Login/index.html"
-                    ><i class="fas fa-user-plus"></i
-                  ></a>
-                </li>
-              </ul>
+            <ul class="nav-menu list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a href="../index.php">الرئيسية<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../Offers/index.php">العروض<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../Agents/index.php">الوكلاء<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../Contact/index.php"> تواصل معنا<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../About/index.php">من نحن<span>-</span></a>
+              </li>
+                <a
+                  class="nav-link"
+                  style="color: white"
+                  href="../Login/login1.php"
+                  ><i class="fas fa-user-plus"></i
+                ></a>
+              </li>
+            </ul>
             </div>
 
             <!--===================== End of Header Block ========================-->
@@ -156,7 +155,7 @@
             <div class="col-xl-7 col-12">
               <div class="text-head">
                 <h5>إحنا مين؟</h5>
-                <h2 class="h2-main">شركة كويك لاين للاتصالات</h2>
+                <h2 class="h2-main">شركة سبيد لاين للاتصالات</h2>
               </div>
               <!--text-head-->
               <ul class="list-unstyled animatedParent">
@@ -173,7 +172,7 @@
                   <div class="content">
                     <h5>بداياتنا</h5>
                     <p>
-                      تأسست شركة كويك لاين عام 2009 حيث بدأت مشوارها في بيع
+                      تأسست شركة سبيد لاين عام 2009 حيث بدأت مشوارها في بيع
                       وتأجير الخطوط الخليوية في المناطق الفلسطينية والخط الاخضر
                     </p>
                   </div>

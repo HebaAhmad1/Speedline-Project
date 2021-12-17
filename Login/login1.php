@@ -1,10 +1,6 @@
 <?php
 session_start();
 $conn = mysqli_connect('localhost', 'root', '', 'speedline_dp');
-
-if($_SESSION['Login'] == 1) {
-    header("Location: ");
-}
 if(isset($_POST['Login'])) {
     $user = htmlspecialchars($_POST['name']);
     $pass = htmlspecialchars($_POST['password']);
@@ -104,31 +100,30 @@ if(isset($_POST['Login'])) {
                   padding-right: 40px;
                 "
               >
-                <ul class="nav-menu list-unstyled list-inline">
-                  <li class="list-inline-item">
-                    <a href="../index.html">الرئيسية<span>-</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="/Offers/index.html">العروض<span>-</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="/Agents/index.html">الوكلاء<span>-</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="/Contact/index.html"> تواصل معنا<span>-</span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="/About/index.html">من نحن<span>-</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      style="color: white"
-                      href="/Login/index.html"
-                      ><i class="fas fa-user-plus"></i
-                    ></a>
-                  </li>
-                </ul>
+              <ul class="nav-menu list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a href="../index.php">الرئيسية<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../Offers/index.php">العروض<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../Agents/index.php">الوكلاء<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../Contact/index.php"> تواصل معنا<span>-</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../About/index.php">من نحن<span>-</span></a>
+              </li>
+                <a
+                  class="nav-link"
+                  style="color: white"
+                  href="../Login/login1.php"
+                  ><i class="fas fa-user-plus"></i
+                ></a>
+              </li>
+            </ul>
               </div>
     
               <!--===================== End of Header Block ========================-->

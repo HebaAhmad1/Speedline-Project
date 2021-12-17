@@ -1,0 +1,996 @@
+form.custom-form .form-group {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+  }
+  .btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+  }
+  html,
+  body {
+    font-family: "DroidArabicKufiRegular";
+  }
+  body {
+      font-family: "DroidArabicKufiRegular";
+      font-weight: 400;
+    }
+    .blue-brd-btn{
+      color: #fff;
+      padding: 14px 34px;
+      display: inline-block;
+      border: 2px solid #006dff;
+      font-size: 15px;
+      text-align: center;
+      background: #006dff;
+      cursor: pointer;
+      font-family: "DroidArabicKufiRegular";
+      transition: 0.2s linear;
+    }
+    
+    
+    .h2-main {
+      color: #131149;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 51px;
+      margin-bottom: 20px;
+      margin-right: -780px;
+    }
+
+
+
+
+  .text-head h5 {
+      font-size: 18px;
+      color: #006dff;
+      margin-bottom: 25px;
+    }
+    
+    .animatedParent {
+      overflow: hidden;
+    }
+    
+  
+/*   
+    #header {
+      right: 0;
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      transition: 0.2s linear;
+      font-family: "DroidArabicKufiRegular";
+  
+    }
+    
+    #header .blue-brd-btn {
+      margin-right: 13px;
+      font-family: "DroidArabicKufiRegular";
+      display: inline-block;
+    }
+    
+    #header .header-block {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    
+    #header .nav-menu a {
+      font-family: "DroidArabicKufiRegular";
+      color: #fff;
+      font-size: 15px;
+      font-weight: 400;
+      transition: 0.2s linear;
+    }
+    
+    #header .nav-menu a:hover {
+      color: #006dff;
+      font-family: "DroidArabicKufiRegular";
+    }
+    
+    #header .nav-menu span {
+      color: #006dff;
+      margin-right: 3px;
+      font-weight: 700;
+    }
+    
+    #header .nav-menu li {
+      position: relative;
+      padding: 43px 21px;
+      list-style: none;
+      transition: 0.2s linear;
+    }
+    
+    #header .nav-menu li:not(:last-child) {
+      margin-left: 0;
+    } */
+    
+    /* #header .nav-menu li.top-sub-menu:hover {
+      cursor: pointer;
+      background: linear-gradient(to bottom, #190a2e 0%, #281643 100%);
+    }
+    
+    #header .nav-menu li.top-sub-menu:hover > a {
+      color: #006dff;
+    }
+    
+    #header .nav-menu li.top-sub-menu:hover .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      background: linear-gradient(to bottom, #281643 0%, #3b2a5a 100%);
+    }
+    
+    #header .nav-menu .sub-menu {
+      top: 100%;
+      right: 0;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      padding: 12px 0 17px 0;
+      text-align: right;
+      z-index: 9;
+      position: absolute;
+      transition: 0.2s linear;
+    }
+    
+    #header .nav-menu .sub-menu li {
+      padding: 0;
+    }
+    
+    #header .nav-menu .sub-menu li a {
+      color: #fff;
+      display: block;
+      padding: 0 19px;
+    }
+    
+    #header .nav-menu .sub-menu li a:hover {
+      color: #006dff;
+    }
+    
+    header .nav-menu .sub-menu li:not(:last-child) {
+      margin-bottom: 17px;
+    }
+    
+    #header .logo {
+      max-width: 208px;
+      margin-top: 1em;
+    } */
+    
+    /* #header .logo-fixed {
+      display: none;
+    }
+    #logo{
+      display: flex;
+      justify-content:flex-end;
+      top: px;
+      font-size: 35px;
+      color: #fff;
+   }
+   #logo h3{
+      font-size: 24px;
+      color: white;
+      margin-top: 35px;
+      font-family: cursive;
+      margin-right: 25px;
+      font-weight: 0px;
+   }
+   .l h3{
+      font-size: 30px;
+      color: blue;
+      text-align: center;
+      margin: 20px;
+      font-family: cursive;
+   }
+   .blue-brd-btn{
+      color: #fff;
+      height: 90px;
+      padding: 10px 34px;
+      display: inline-block;
+      border: 2px solid #006dff;
+      text-align: center;
+      background: #006dff;
+      cursor: pointer;
+      transition: 0.2s linear;
+    }
+    header.fixed {
+      background: #0030ff;
+      background: linear-gradient(to bottom, #0030ff 0%, #006dff 100%);
+    }
+    
+    header.fixed .nav-menu li {
+      padding: 43px 21px;
+    }
+  #sync1 .item1 .blue-brd-btn:hover,
+  #sync1 .item1 .blue-brd-btn:active {
+    background: #110f46;
+    border: 2px solid #110f46;
+  }
+    header.fixed .nav-menu .sub-menu li {
+      padding: 0;
+    }
+  footer{
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      font-family: "DroidArabicKufiRegular";
+    }
+    footer {
+        position: relative;
+      padding-top: 210px;
+      max-height: 565px;
+      background-size: cover;
+      bottom: 0px;
+      left: 0px;
+      
+    }
+    p {
+      color: #3a3864;
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 400;
+    }
+    footer ul li {
+      line-height: 28px;
+    }
+     */
+    /* footer ul li a {
+      color: #3a3864;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    
+    footer ul li a:hover {
+      color: #006dff;
+    }
+    
+    footer .title {
+      color: #100f45;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+    
+   
+    
+    footer .inside-column {
+      padding-right: 100px;
+    }
+    
+    footer .inside {
+      padding-right: 60px;
+    }
+    
+    footer .footer-menu-wrap {
+      margin-bottom: 85px;
+    }
+    
+    footer .footer-social-wrapper {
+      padding-left: 71px;
+    }
+    
+    .footer-social-wrapper {
+      text-align: left;
+    }
+    
+     */
+    
+    /* .footer-social-wrapper a {
+      margin-left: 0;
+    }
+    
+    .footer-social-wrapper a:not(:last-child) {
+      margin-left: 14px;
+    } */
+  /* /=====  End of 15. Style Login Page  ======/   */
+  /* .first-section {
+    padding: 145px 0 0;
+    margin-bottom: 118px;
+    max-height: 653px;
+    background-size: cover !important;
+    position: relative;
+    overflow-x: hidden;
+    background: url(../img/first-section-bg.png) no-repeat;
+  }
+  .first-section .text {
+    max-width: 394px;
+    padding-top: 98px;
+  }
+  .first-section .text h1 {
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 33px;
+    line-height: 70px;
+  }
+  .first-section .text span {
+    font-size: 28px;
+    color: #006dff;
+  }
+  .first-section .text .line {
+    width: 68px;
+    height: 2px;
+    margin-right: 15px;
+    display: inline-block;
+    background-color: #006dff;
+  }
+  .first-section .text .line:nth-child(2) {
+    display: none;
+  }
+  .first-section .col-12 {
+    z-index: 9;
+  } */
+  /* .first-section.animatedParent {
+    overflow: inherit;
+  }
+  .first-section.not-images {
+    padding: 134px 0 322px;
+    max-height: 660px;
+    background: url(/img/first-section-not-images.png) no-repeat;
+  }
+  .first-section.not-images .text {
+    max-width: 100%;
+    text-align: center;
+  }
+  .first-section.bg2 {
+    background: url(../img/first-section-bg-contact.png) no-repeat;
+  }
+  .first-section .cloud,
+  .first-section .cloud-two,
+  .first-section .mini-cloud,
+  .first-section .mini-cloud.two,
+  .first-section .mini-cloud.three {
+    left: 0;
+    position: absolute;
+    display: inline-block;
+  }
+  .first-section .cloud {
+    width: 130px;
+    top: 32%;
+    height: 23px;
+    background: url(../img/cloud.png) no-repeat;
+    animation: cloud_one 250s infinite;
+    animation-timing-function: linear !important;
+  }
+  .first-section .cloud-two {
+    top: 47%;
+    width: 210px;
+    height: 30px;
+    background: url(../img/cloud2.png) no-repeat;
+    animation: cloud_two 300s infinite;
+    animation-timing-function: linear !important;
+  }
+  .first-section .mini-cloud {
+    animation: mini_cloud 500s infinite;
+  }
+  .first-section .mini-cloud.two {
+    animation: mini_cloud 350s infinite;
+  }
+  .first-section .mini-cloud.three {
+    animation: mini_cloud 350s infinite;
+  }
+  .first-section .mini-cloud,
+  .first-section .mini-cloud.two,
+  .first-section .mini-cloud.three {
+    top: 16%;
+    width: 32px;
+    height: 20px;
+    background: url(../img/mini-cloud.png) no-repeat;
+    animation-timing-function: linear !important;
+  }
+  .first-section .mini-cloud.two { */
+    /* top: 55%;
+  }
+  .first-section .mini-cloud.three {
+    top: 81%;
+  }
+  .text-about {
+    margin-bottom: 98px;
+  }
+  .text-about .h2-main {
+    margin-bottom: 10px;
+  }
+  .text-about p {
+    line-height: 30px;
+    font-size: 18px;
+  }
+  /* 02. About Working
+     ==================================== */
+  /* .about .cloud {
+    top: 79%;
+    animation: cloud_one_about 300s infinite;
+  }
+  .about .cloud-two {
+    animation: cloud_two_about 300s infinite;
+  }
+  .about .first-section {
+    padding: 180px 0 0;
+  }
+  .about-working {
+    padding: 115px 0 167px 0;
+    background-size: cover !important;
+    background: url(../img/background-about.png) no-repeat center;
+  }
+  .about-working ul {
+    clear: both;
+    display: inline-block;
+  }
+  .about-working ul li {
+    width: 50%;
+    float: left;
+    margin-bottom: 73px;
+  }
+  .about-working ul li img {
+    max-width: 58px;
+    margin-right: 29px;
+  }
+  .about-working ul li h5 {
+    color: #131149;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .about-working ul li p {
+    line-height: 22px;
+  }
+  .about-working ul li:nth-child(even) {
+    padding-left: 36px;
+  }
+  .about-working .text-head {
+    margin-bottom: 64px;
+  }
+  .about-working .text-head h5 {
+    margin-bottom: 14px;
+  }
+  .animatedParent {
+    overflow: hidden;
+  } */  
+
+
+
+
+  
+  html,body {
+  font-family: "DroidArabicKufiRegular";
+
+}
+ 
+  .h2-main {
+    color: #131149;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 51px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+  
+
+/* 01. Header
+   ==================================== */
+   #header {
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    transition: 0.2s linear;
+    font-family: "DroidArabicKufiRegular";
+
+  }
+  
+  #header .blue-brd-btn {
+    margin-right: 13px;
+    font-family: "DroidArabicKufiRegular";
+    display: inline-block;
+  }
+  
+  #header .header-block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  #header .nav-menu a {
+    font-family: "DroidArabicKufiRegular";
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: 0.2s linear;
+  }
+  
+  #header .nav-menu a:hover {
+    color: #006dff;
+    font-family: "DroidArabicKufiRegular";
+  }
+  
+  #header .nav-menu span {
+    color: #006dff;
+    margin-right: 3px;
+    font-weight: 700;
+  }
+  
+  #header .nav-menu li {
+    position: relative;
+    padding: 43px 21px;
+    list-style: none;
+    transition: 0.2s linear;
+  }
+  
+  #header .nav-menu li:not(:last-child) {
+    margin-left: 0;
+  }
+  
+  #header .nav-menu li.top-sub-menu:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #190a2e 0%, #281643 100%);
+  }
+  
+  #header .nav-menu li.top-sub-menu:hover > a {
+    color: #006dff;
+  }
+  
+  #header .nav-menu li.top-sub-menu:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    background: linear-gradient(to bottom, #281643 0%, #3b2a5a 100%);
+  }
+  
+  #header .nav-menu .sub-menu {
+    top: 100%;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    padding: 12px 0 17px 0;
+    text-align: right;
+    z-index: 9;
+    position: absolute;
+    transition: 0.2s linear;
+  }
+  
+  #header .nav-menu .sub-menu li {
+    padding: 0;
+  }
+  
+  #header .nav-menu .sub-menu li a {
+    color: #fff;
+    display: block;
+    padding: 0 19px;
+  }
+  
+  #header .nav-menu .sub-menu li a:hover {
+    color: #006dff;
+  }
+  
+  header .nav-menu .sub-menu li:not(:last-child) {
+    margin-bottom: 17px;
+  }
+  
+  #header .logo {
+    max-width: 208px;
+    margin-top: 1em;
+  }
+  
+  #header .logo-fixed {
+    display: none;
+  }
+  #logo{
+    display: flex;
+    justify-content:flex-end;
+    top: px;
+    font-size: 35px;
+    color: #fff;
+ }
+ #logo h3{
+    font-size: 24px;
+    color: white;
+    margin-top: 35px;
+    font-family: cursive;
+    margin-right: 25px;
+    font-weight: 0px;
+ }
+ .l h3{
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+    margin: 20px;
+    font-family: cursive;
+ }
+ .blue-brd-btn{
+    color: #fff;
+    height: 90px;
+    padding: 10px 34px;
+    display: inline-block;
+    border: 2px solid #006dff;
+    text-align: center;
+    background: #006dff;
+    cursor: pointer;
+    transition: 0.2s linear;
+  }
+  header.fixed {
+    background: #0030ff;
+    background: linear-gradient(to bottom, #0030ff 0%, #006dff 100%);
+  }
+  
+  header.fixed .nav-menu li {
+    padding: 43px 21px;
+  }
+#sync1 .item1 .blue-brd-btn:hover,
+#sync1 .item1 .blue-brd-btn:active {
+  background: #110f46;
+  border: 2px solid #110f46;
+}
+  header.fixed .nav-menu .sub-menu li {
+    padding: 0;
+  }
+  
+  .col-form-label {
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+  }
+
+ 
+/* 01. First Section
+   ==================================== */
+   .first-section {
+    padding: 145px 0 0;
+    margin-bottom: 118px;
+    max-height: 853px;
+    background-size: cover !important;
+    position: relative;
+    background: url(../wwwroot/img/first-section-bg.png) no-repeat;
+}
+
+.first-section .text {
+    max-width: 594px;
+    padding-top: 0px;
+    font-family: "DroidArabicKufiRegular";
+
+}
+
+.first-section .text h1 {
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 33px;
+    line-height: 70px;
+    font-family: 'DroidArabicKufiRegular';
+
+}
+
+.first-section .text span {
+    font-size: 28px;
+    color: #006dff;
+    font-family: 'DroidArabicKufiRegular';
+
+
+}
+
+.first-section .text .line {
+    width: 68px;
+    height: 2px;
+    margin-left: 15px;
+    display: inline-block;
+    background-color: #006dff;
+
+}
+
+h5{
+    color: #006dff;
+    font-size: 30px;
+    font-family: "DroidArabicKufiRegular";
+
+}
+
+.first-section .text .line:nth-child(2) {
+    display: none;
+}
+.container{
+    margin-right: 90px;
+}
+
+    .first-section .col-12 {
+        z-index: 9;
+        margin-right: 600px;
+        margin-top: -240px;
+    }
+
+    .first-section.animatedParent {
+        overflow: inherit;
+    }
+
+    .first-section.not-images {
+        padding: 134px 0 322px;
+        max-height: 660px;
+        background: url(../img/first-section-not-images.png) no-repeat;
+    }
+
+    .first-section.not-images .text {
+            max-width: 100%;
+            text-align: center;
+    }
+
+    .first-section.bg2 {
+        background: url(../img/first-section-bg-contact.png) no-repeat;
+    }
+
+    .first-section .cloud,
+    .first-section .cloud-two,
+    .first-section .mini-cloud,
+    .first-section .mini-cloud.two,
+    .first-section .mini-cloud.three {
+        right: 0;
+        position: absolute;
+        display: inline-block;
+    }
+
+    .first-section .cloud {
+        width: 130px;
+        top: 32%;
+        height: 23px;
+        background: url(../img/cloud.png) no-repeat;
+        animation: cloud_one 250s infinite;
+        animation-timing-function: linear !important;
+    }
+
+    .first-section .cloud-two {
+        top: 47%;
+        width: 210px;
+        height: 30px;
+        background: url(../img/cloud2.png) no-repeat;
+        animation: cloud_two 300s infinite;
+        animation-timing-function: linear !important;
+    }
+
+    .first-section .mini-cloud {
+        animation: mini_cloud 500s infinite;
+    }
+
+        .first-section .mini-cloud.two {
+            animation: mini_cloud 350s infinite;
+        }
+
+        .first-section .mini-cloud.three {
+            animation: mini_cloud 350s infinite;
+        }
+
+        .first-section .mini-cloud,
+        .first-section .mini-cloud.two,
+        .first-section .mini-cloud.three {
+            top: 16%;
+            width: 32px;
+            height: 20px;
+            background: url(../img/mini-cloud.png) no-repeat;
+            animation-timing-function: linear !important;
+        }
+
+            .first-section .mini-cloud.two {
+                top: 55%;
+            }
+
+            .first-section .mini-cloud.three {
+                top: 81%;
+            }
+
+.text-about {
+    margin-bottom: 98px;
+    font-family: "DroidArabicKufiRegular";
+
+}
+
+    .text-about .h2-main {
+        margin-bottom: 20px;
+        font-family: "DroidArabicKufiRegular";
+        margin-right: 0px;
+
+    }
+
+    .text-about p {
+        font-family: "DroidArabicKufiRegular";
+        line-height: 30px;
+        font-size: 18px;
+    }
+/* 02. About Working
+   ==================================== */
+.about .first-section {
+    padding: 260px 0 0;
+}
+
+.about-working {
+    padding: 115px 0 167px 0;
+    background-size: cover !important;
+    background: url(../img/background-about.png) no-repeat center;
+}
+
+.about-working ul {
+        clear: both;
+        display: inline-block;
+}
+
+.about-working ul li {
+    width: 50%;
+    float: right;
+    margin-bottom: 73px;
+
+}
+
+.about-working ul li img {
+    max-width: 58px;
+    margin-left: 29px;
+}
+
+.about-working ul li h5 {
+    color: #131149;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 20px;
+    font-family: "DroidArabicKufiRegular";
+ }
+ .about-working h2-main{
+    font-family: "DroidArabicKufiRegular";
+    margin-right: 0px;
+
+ }
+.about-working ul li p {
+    line-height: 22px;
+    font-size: 17px;
+    font-family: "DroidArabicKufiRegular";
+
+}
+
+/*  */
+
+    .about-working .text-head {
+        margin-bottom: 64px;
+    }
+
+.about-working .text-head h5 {
+    margin-bottom: 14px;
+    color: #0069ff;
+    font-family: "DroidArabicKufiRegular";
+    font-size:20px ;
+    font-weight: bold;
+ }
+
+
+/* 03. Team Slider
+   ==================================== */
+
+.team-slider-text {
+    margin-top: -15px;
+    margin-bottom: 57px;
+}
+
+.team-slider-text .text-head {
+    max-width: 460px;
+    margin: 0 auto;
+    font-family: "DroidArabicKufiRegular";
+    font-weight: bold;
+
+}
+
+.team-slider-text .text-head h5 {
+    margin-bottom: 13px;
+    font-size: 20px;
+    font-family: "DroidArabicKufiRegular";
+    font-weight: bold;
+}
+
+.team-slider-text .h2-main {
+     margin-bottom: 7px;
+     font-weight: bold;
+}
+
+                   /* 06. Footer Style            =
+        ======================================== */
+        /**
+         Navigation File
+        
+         01. Footer
+         02. Copyright
+        
+         */
+        /* 01. Footer
+           ==================================== */
+        footer {
+            padding-top: 210px;
+            min-height: 565px;
+            background: url('../img/bg-footer.png') no-repeat;
+            background-size: cover;
+        }
+        
+            footer ul li {
+                line-height: 28px;
+            }
+        
+                footer ul li a {
+                    color: #3a3864;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+        
+                    footer ul li a:hover {
+                        color: #006dff;
+                    }
+        
+            footer .title {
+                color: #100f45;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 22px;
+                text-transform: uppercase;
+            }
+        
+            footer .logo {
+                padding-left: 0;
+            }
+        
+                footer .logo img {
+                    max-width: 208px;
+                    margin-bottom: 22px;
+                }
+        
+            footer .inside-column {
+                padding-right: 100px;
+            }
+        
+            footer .inside {
+                padding-right: 60px;
+            }
+        
+            footer .footer-menu-wrap {
+                margin-bottom: 85px;
+            }
+        
+            footer .footer-social-wrapper {
+                padding-left: 71px;
+            }
+        
+        .footer-social-wrapper {
+            text-align: left;
+        }
+        
+            .footer-social-wrapper img {
+                max-width: 18px;
+            }
+        
+            .footer-social-wrapper a {
+                margin-left: 0;
+            }
+        
+                .footer-social-wrapper a:not(:last-child) {
+                    margin-left: 14px;
+                }
+        
+                .footer-social-wrapper a:hover svg path {
+                    fill: #006dff;
+                }
+        /* 02. Copyright
+           ==================================== */
+        .copyright {
+            padding: 14px 0;
+            background-color: #f1f5fb;
+        }
+        
+            .copyright p {
+                font-size: 14px;
+                color: #9e9fb5;
+                font-weight: 600;
+            }
+        /* /=====  End of 06. Footer Style  ======/ */
