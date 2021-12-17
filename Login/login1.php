@@ -1,3 +1,33 @@
+<?php
+session_start();
+$conn = mysqli_connect('localhost', 'root', '', 'speedline_dp');
+
+if($_SESSION['Login'] == 1) {
+    header("Location: ");
+}
+if(isset($_POST['Login'])) {
+    $user = htmlspecialchars($_POST['name']);
+    $pass = htmlspecialchars($_POST['password']);
+
+    $sql = "SELECT * FROM users WHERE name = '$user' and password='$pass'";
+    $result = mysqli_query($conn, $sql);
+    $user = mysqli_fetch_assoc($result);
+
+   
+
+	if($user) {
+		$_SESSION['Login'] = 1;
+		header("Location: ../wwwroot/alaa.html");
+	}else {
+		echo 'Username or Password Incorrect, Please try again';
+	}
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -111,20 +141,20 @@
         <div class="row">
           <div class="col-xl-12 animated growIn">
             <!--===================== Custom Form ========================-->
-            <form class="custom-form" id="account" method="post">
+            <form action="" class="custom-form" id="account" method="post">
               <h4>تسجيل الدخول</h4>
               <div class="form-group">
                 <label name="UserName">اسم المستخدم</label>
-                <input name="UserName" class="form-control" />
+                <input name="name" class="form-control" />
                 <span class="text-danger"></span>
               </div>
               <div class="form-group last">
-                <label name="Password">كلمة المرور</label>
-                <input name="Password" class="form-control" />
+                <label name="">كلمة المرور</label>
+                <input type="password" name="password" class="form-control" />
                 <span class="text-danger"></span>
               </div>
               <div class="text-center">
-                <button type="submit" class="see-brd-btn">تسجيل الدخول</button>
+                <button type="submit" class="see-brd-btn"  name="Login" value="Login" >تسجيل الدخول</button>
               </div>
             </form>
             <!--===================== End of Custom Form ========================-->
