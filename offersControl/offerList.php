@@ -10,8 +10,8 @@ $results = mysqli_query($db, "SELECT * FROM info");
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>إضافة عروض</title>
-    <link rel="stylesheet" href="Create.css" />
+    <title> العروض</title>
+    <link rel="stylesheet" href="../wwwroot/css/offerControl.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -80,31 +80,32 @@ $results = mysqli_query($db, "SELECT * FROM info");
             <div
               style="margin-left: -300px; margin-top: -5px; padding-right: 40px"
             >
-              <ul class="nav-menu list-unstyled list-inline">
+            <ul class="nav-menu list-unstyled list-inline">
                 <li class="list-inline-item">
-                  <a href="../index.html">الرئيسية<span>-</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="/Offers/index.html">العروض<span>-</span></a>
+                  <a href="../index.php">الرئيسية<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/Agents/index.html">الوكلاء<span>-</span></a>
+                  <a href="../Offers/index.php">العروض<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/Contact/index.html"> تواصل معنا<span>-</span></a>
+                  <a href="../Agents/index.php">الوكلاء<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/About/index.html">من نحن<span>-</span></a>
+                  <a href="../Contact/index.php"> تواصل معنا<span>-</span></a>
                 </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    style="color: white"
-                    href="/Login/index.html"
-                    ><i class="fas fa-user-plus"></i
-                  ></a>
+                <li class="list-inline-item">
+                  <a href="../About/index.php">من نحن<span>-</span></a>
                 </li>
-              </ul>
+                <li class="list-inline-item">
+                  <a href="../offersControl/offerList.php"> التحكم بالعروض<span>-</span></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="../AgentControl/agentList.php"> التحكم بالوكلاء <span>-</span></a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Login/logout.php"> <i class="fas fa-sign-out-alt"></i>  خروج</a>
+                  </li>
+                </ul>
             </div>
 
             <!--===================== End of Header Block ========================-->
@@ -147,14 +148,16 @@ $results = mysqli_query($db, "SELECT * FROM info");
     <h2 class="text-info" style="padding: 50px; margin-top: -150px">
        العروض
     </h2>
-    
+    <div class="text-center">
+              <a href="../offersControl/create.php">  <button type="submit" class="see-brd-btn"  name="Login" value="Login"style="margin-right:-1180px;" >إضافة عروض</button></a>
+    </div>
 
     <table class="table table-striped border">
         <thead>
             <tr class="table-secondary">
-                <th>Description</th>
-                <th>Price</th>
-                <th colspan="2">Action</th>
+                  <th><h3>الوصف</h3></th>
+               <th><h3>السعر</h3></th>
+                <th colspan="2"></th>
             </tr>
         </thead>
         
@@ -163,10 +166,10 @@ $results = mysqli_query($db, "SELECT * FROM info");
                 <td><?php echo $row['description']; ?></td>
                 <td><?php echo $row['price']; ?></td>
                 <td>
-                    <a href="edit.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
+                    <a href="edit.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >تعديل</a>
                 </td>
                 <td>
-                    <a href="delete.php?del=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
+                    <a href="delete.php?del=<?php echo $row['id']; ?>" class="del_btn">حذف</a>
                 </td>
             </tr>
         <?php } ?>

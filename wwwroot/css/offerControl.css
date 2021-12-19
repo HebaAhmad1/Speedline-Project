@@ -53,7 +53,7 @@ form.custom-form .form-group {
     }
     
   
-/*   
+  
     #header {
       right: 0;
       width: 100%;
@@ -655,7 +655,7 @@ form.custom-form .form-group {
     max-height: 853px;
     background-size: cover !important;
     position: relative;
-    background: url(../wwwroot/img/first-section-bg.png) no-repeat;
+    background: url(../css/img/first-section-bg.png) no-repeat;
 }
 
 .first-section .text {

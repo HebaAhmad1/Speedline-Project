@@ -503,8 +503,8 @@ header .mobile-btn span:after {
 
 .philosophy-block .philosophy-div1 {
   min-height: 405px;
-  width: 50%;
-  background: url("/wwwroot/img/about-img-1.png") no-repeat;
+  width: 50%; 
+  background: url("./img/about-img-1.png") no-repeat;
   background-size: 77%;
   position: relative;
 }
@@ -584,7 +584,7 @@ header .mobile-btn span:after {
 .iphone-block {
   margin-bottom: 31px;
   padding: 148px 0 278px 0;
-  background: url("/wwwroot/img/iphone-background.png") no-repeat center;
+  background: url("../wwwroot/img/iphone-background.png") no-repeat center;
   background-size: cover;
 }
 
@@ -622,12 +622,12 @@ header .mobile-btn span:after {
 .price-plan-block {
   margin-bottom: 10px;
   padding: 20px 0 234px 0;
-  background: url("/wwwroot/img/background-price-block.png") no-repeat center;
+  background: url("../wwwroot/img/background-price-block.png") no-repeat center;
   background-size: cover;
 }
 
 .price-plan-block .h2-main {
-  color: #fff;
+  color: #131149;;
   text-align: center;
   width: 100%;
   display: block;
@@ -712,7 +712,7 @@ header .mobile-btn span:after {
 footer {
   padding-top: 210px;
   min-height: 565px;
-  background: url("/wwwroot/img/bg-footer.png") no-repeat;
+  background: url("../wwwroot/img/bg-footer.png") no-repeat;
   background-size: cover;
 }
 

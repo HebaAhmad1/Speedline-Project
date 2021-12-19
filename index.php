@@ -11,9 +11,7 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
     <title>شركة سبيد لاين لخدمات الاتصالات</title>
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
+      href="./wwwroot/css/lib/all.css"
     />
     <meta
       name="keywords"
@@ -26,27 +24,24 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+      href="./wwwroot/css/Framework/bootstrap.min.css"
     />
     <!--  RTL Bootstrap Css -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.min.css"
+      href="./wwwroot/css/rtl/bootstrap-rtl.min.css"
     />
     <!-- Google Font -->
     <link
       rel="stylesheet"
-      media="screen"
       href="https://fontlibrary.org/face/droid-arabic-kufi"
-      type="text/css"
     />
     <!-- Style Theme -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
+      href="./wwwroot/css/fontawsam/all.css"
+    
     />
 
     <!-- Responsive Theme -->
@@ -281,7 +276,7 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
                 تأسس شركة سبيد لاين عام 2009 حيث بدأت مشوارها في بيع وتأجير
                 الخطوط الخليوية في المناطق الفلسطينيه والخط الاخضر .
               </p>
-              <a href="/About/index.html" class="see-brd-btn">المزيد عنا</a>
+              <a href="./About/index.php" class="see-brd-btn">المزيد عنا</a>
             </div>
           </div>
         </div>
@@ -300,7 +295,7 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
                 شريحة سلكوم 50-GB سعر الشريحه 19 ش.ج مرة واحدة<br />
                 سعر الفاتورة شهري 59 ش.ج<br />
               </p>
-              <a href="/Offers/index.html" class="see-brd-btn">اذهب للعروض</a>
+              <a href="./Offers/index.php" class="see-brd-btn">اذهب للعروض</a>
             </div>
           </div>
         </div>
@@ -345,7 +340,7 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
       <div class="philosophy-block">
         <div class="container-fluid">
           <div class="row animatedParent" style="margin-right: -50px">
-            <div class="col-md-6 philosophy-div1"></div>
+            <div class="col-md-6 philosophy-div1" ></div>
             <div class="col-md-6 philosophy-div2">
               <h4>خدماتنا</h4>
               <ul style="padding-top: 20px; margin-top: 25px">
@@ -397,10 +392,10 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
                 <h4 class="title">الشركة</h4>
                 <ul class="list-unstyled">
                   <li>
-                    <a href="/index.html">الرئيسية</a>
+                    <a href="./index.html">الرئيسية</a>
                   </li>
                   <li>
-                    <a href="/About/index.html">من نحن؟</a>
+                    <a href="./About/index.php">من نحن؟</a>
                   </li>
                 </ul>
               </div>
@@ -410,7 +405,7 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
                 <h4 class="title">الدعم</h4>
                 <ul class="list-unstyled">
                   <li>
-                    <a href="/Contact/index.html">تواصل معنا</a>
+                    <a href="/Contact/index.php">تواصل معنا</a>
                   </li>
                 </ul>
                 <br />

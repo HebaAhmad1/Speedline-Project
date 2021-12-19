@@ -12,7 +12,6 @@ if (isset($_POST['update'])) {
 	header('location: offerList.php');
 }
 ?>
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,7 +19,7 @@ if (isset($_POST['update'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>تعديل عروض</title>
-    <link rel="stylesheet" href="Create.css" />
+    <link rel="stylesheet" href="../wwwroot/css/offerControl.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -89,31 +88,32 @@ if (isset($_POST['update'])) {
             <div
               style="margin-left: -300px; margin-top: -5px; padding-right: 40px"
             >
-              <ul class="nav-menu list-unstyled list-inline">
+            <ul class="nav-menu list-unstyled list-inline">
                 <li class="list-inline-item">
-                  <a href="../index.html">الرئيسية<span>-</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="/Offers/index.html">العروض<span>-</span></a>
+                  <a href="../index.php">الرئيسية<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/Agents/index.html">الوكلاء<span>-</span></a>
+                  <a href="../Offers/index.php">العروض<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/Contact/index.html"> تواصل معنا<span>-</span></a>
+                  <a href="../Agents/index.php">الوكلاء<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/About/index.html">من نحن<span>-</span></a>
+                  <a href="../Contact/index.php"> تواصل معنا<span>-</span></a>
                 </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    style="color: white"
-                    href="/Login/index.html"
-                    ><i class="fas fa-user-plus"></i
-                  ></a>
+                <li class="list-inline-item">
+                  <a href="../About/index.php">من نحن<span>-</span></a>
                 </li>
-              </ul>
+                <li class="list-inline-item">
+                  <a href="../offersControl/offerList.php"> التحكم بالعروض<span>-</span></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="../AgentControl/agentList.php"> التحكم بالوكلاء <span>-</span></a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Login/logout.php"> <i class="fas fa-sign-out-alt"></i>  خروج</a>
+                  </li>
+                </ul>
             </div>
 
             <!--===================== End of Header Block ========================-->
@@ -174,7 +174,7 @@ if (isset($_POST['update'])) {
           </div>
           <!-- <span asp-validation-for="DescriptionAr" class="text-danger"></span> -->
         </div>
-        <div class="form-group">
+        <div class="form-group row">
           <div class="col-2">
             <label name="price" class="col-form-label">السعر</label>
           </div>
@@ -186,7 +186,7 @@ if (isset($_POST['update'])) {
         <div class="form-group row">
           <div class="col-5 offset-2">
             <div class="form-group">
-                <button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
+                <button class="btn" type="submit" name="update" style="background-color:dodgerblue; color:white" >حفظ التعديل</button>
             </div>
 
             <!-- <div>

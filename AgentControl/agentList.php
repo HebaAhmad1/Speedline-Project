@@ -10,8 +10,8 @@ $results = mysqli_query($db, "SELECT * FROM agent");
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> اضافو وكلاء</title>
-    <link rel="stylesheet" href="Create.css" />
+    <title>  الوكلاء</title>
+    <link rel="stylesheet" href="../wwwroot/css/offerControl.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -80,31 +80,32 @@ $results = mysqli_query($db, "SELECT * FROM agent");
             <div
               style="margin-left: -300px; margin-top: -5px; padding-right: 40px"
             >
-              <ul class="nav-menu list-unstyled list-inline">
+            <ul class="nav-menu list-unstyled list-inline">
                 <li class="list-inline-item">
-                  <a href="../index.html">الرئيسية<span>-</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="/Offers/index.html">العروض<span>-</span></a>
+                  <a href="../index.php">الرئيسية<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/Agents/index.html">الوكلاء<span>-</span></a>
+                  <a href="../Offers/index.php">العروض<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/Contact/index.html"> تواصل معنا<span>-</span></a>
+                  <a href="../Agents/index.php">الوكلاء<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/About/index.html">من نحن<span>-</span></a>
+                  <a href="../Contact/index.php"> تواصل معنا<span>-</span></a>
                 </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    style="color: white"
-                    href="/Login/index.html"
-                    ><i class="fas fa-user-plus"></i
-                  ></a>
+                <li class="list-inline-item">
+                  <a href="../About/index.php">من نحن<span>-</span></a>
                 </li>
-              </ul>
+                <li class="list-inline-item">
+                  <a href="../offersControl/offerList.php"> التحكم بالعروض<span>-</span></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="../AgentControl/agentList.php"> التحكم بالوكلاء <span>-</span></a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Login/logout.php"> <i class="fas fa-sign-out-alt"></i>  خروج</a>
+                  </li>
+                </ul>
             </div>
 
             <!--===================== End of Header Block ========================-->
@@ -117,10 +118,10 @@ $results = mysqli_query($db, "SELECT * FROM agent");
         <div class="row">
           <div id="sync1" class="owl-carousel owl-theme">
             <div class="text">
-              <h1> العروض</h1>
+              <h1> الوكلاء</h1>
               <span class="d-flex align-items-center">
                 <b class="a1" style="color: white"
-                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;أهلا وسهلا بكم</b
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  أهلاً وسهلاً بكم</b
                 >
                 <b class="line">&nbsp;</b>
               </span>
@@ -148,13 +149,15 @@ $results = mysqli_query($db, "SELECT * FROM agent");
        الوكلاء
     </h2>
     
-
+    <div class="text-center">
+              <a href="../AgentControl/createA.php">  <button type="submit" class="see-brd-btn"  name="Login" value="Login"style="margin-right:-1180px;" >إضافة وكلاء</button></a>
+    </div>
     <table class="table table-striped border">
         <thead>
             <tr class="table-secondary">
-                <th>AgentName</th>
-                <th>discription</th>
-                <th colspan="2">Action</th>
+                <th><h3>اسم الوكيل</h3></th>
+                <th><h3>عنوان الوكيل</h3></th>
+                <th colspan="2"></th>
             </tr>
         </thead>
         
@@ -163,10 +166,10 @@ $results = mysqli_query($db, "SELECT * FROM agent");
                 <td><?php echo $row['AgentName']; ?></td>
                 <td><?php echo $row['discription']; ?></td>
                 <td>
-                    <a href="editA.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
+                    <a href="editA.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >تعديل</a>
                 </td>
                 <td>
-                    <a href="deleteA.php?del=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
+                    <a href="deleteA.php?del=<?php echo $row['id']; ?>" class="del_btn">حذف</a>
                 </td>
             </tr>
         <?php } ?>

@@ -504,7 +504,7 @@ header .mobile-btn span:after {
 .philosophy-block .philosophy-div1 {
   min-height: 405px;
   width: 50%;
-  background: url("/wwwroot/img/about-img-1.png") no-repeat;
+  background: url("../img/about-img-1.png") no-repeat;
   background-size: 77%;
   position: relative;
 }
@@ -626,15 +626,15 @@ header .mobile-btn span:after {
   background-size: cover;
 }
 
-.price-plan-block .h2-main {
-  color: #fff;
+ .price-plan-block .h2-main {
+  color: #131149;
   text-align: center;
   width: 100%;
   display: block;
   margin-bottom: 51px;
   margin-right: 0;
   margin-top: 20px;
-}
+} 
 
 .price-plan-block .price-plan-icon-wrap {
   max-width: 48%;

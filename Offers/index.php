@@ -158,7 +158,7 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
                 <div class="col-xl-3 col-lg-6 col-md-6 custom">
                     <div class="price-plan-item-inside">
                         <div class="price-plan-icon-wrap plan-item-icon-1">
-                            <img class="price-plan-item-icon" src="./wwwroot/img/shop-icon1.png" alt="images">
+                            <img class="price-plan-item-icon"style="margin-right:130px;" src="../wwwroot/img/shop-icon1.png" alt="images">
                         </div>
                         <br>
                         <br>
@@ -199,43 +199,44 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
         </div>
       </div>
 
+      
       <div class="col-xl-3 col-lg-3 col-md-6 col-12">
-        <div class="inside">
-          <h4 class="title">الشركة</h4>
-          <ul class="list-unstyled">
-            <li>
-              <a href="/index.html">الرئيسية</a>
-            </li>
-            <li>
-              <a href="/About/index.html">من نحن؟</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-xl-3 col-lg-3 col-md-6 col-12">
-        <div class="inside">
-          <h4 class="title">الدعم</h4>
-          <ul class="list-unstyled">
-            <li>
-              <a href="/Contact/index.html">تواصل معنا</a>
-            </li>
-          </ul>
-          <br />
-          <div>
-            <div>
-              <a href="https://www.facebook.com/">
-                <i class="fab fa-facebook"></i> </a
-              >&nbsp;
-              <a href="https://www.instagram.com/">
-                <i class="fab fa-instagram"></i> </a
-              >&nbsp;
-              <a href="https://www.twitter.com/">
-                <i class="fab fa-twitter"></i>
-              </a>
+              <div class="inside">
+                <h4 class="title">الشركة</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="../index.php  ">الرئيسية</a>
+                  </li>
+                  <li>
+                    <a href="../About/index.php">من نحن؟</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+              <div class="inside">
+                <h4 class="title">الدعم</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="../Contact/index.php">تواصل معنا</a>
+                  </li>
+                </ul>
+                <br />
+                <div>
+                  <div>
+                    <a href="https://www.facebook.com/">
+                      <i class="fab fa-facebook"></i> </a
+                    >&nbsp;
+                    <a href="https://www.instagram.com/">
+                      <i class="fab fa-instagram"></i> </a
+                    >&nbsp;
+                    <a href="https://www.twitter.com/">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
       <div class="col-xl-3 col-lg-2 col-md-6 col-12">
         <h4 class="title">تواصل معنا</h4>
         <ul class="list-unstyled">

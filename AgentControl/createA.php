@@ -14,7 +14,7 @@ session_start();
 
 		mysqli_query($db, "INSERT INTO agent (AgentName, discription) VALUES ('$AgentName', '$discription')"); 
         $_SESSION['message'] = "Offer saved"; 
-        header('location: createA.php');
+        header('location: agentList.php');
 	}
 ?>
 <!DOCTYPE html>
@@ -23,8 +23,8 @@ session_start();
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>إضافة عروض</title>
-    <link rel="stylesheet" href="Create.css" />
+    <title>إضافة وكلاء</title>
+    <link rel="stylesheet" href="../wwwroot/css/offerControl.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -93,31 +93,32 @@ session_start();
             <div
               style="margin-left: -300px; margin-top: -5px; padding-right: 40px"
             >
-              <ul class="nav-menu list-unstyled list-inline">
+            <ul class="nav-menu list-unstyled list-inline">
                 <li class="list-inline-item">
-                  <a href="../index.html">الرئيسية<span>-</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="/Offers/index.html">العروض<span>-</span></a>
+                  <a href="../index.php">الرئيسية<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/Agents/index.html">الوكلاء<span>-</span></a>
+                  <a href="../Offers/index.php">العروض<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/Contact/index.html"> تواصل معنا<span>-</span></a>
+                  <a href="../Agents/index.php">الوكلاء<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="/About/index.html">من نحن<span>-</span></a>
+                  <a href="../Contact/index.php"> تواصل معنا<span>-</span></a>
                 </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    style="color: white"
-                    href="/Login/index.html"
-                    ><i class="fas fa-user-plus"></i
-                  ></a>
+                <li class="list-inline-item">
+                  <a href="../About/index.php">من نحن<span>-</span></a>
                 </li>
-              </ul>
+                <li class="list-inline-item">
+                  <a href="../offersControl/offerList.php"> التحكم بالعروض<span>-</span></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="../AgentControl/agentList.php"> التحكم بالوكلاء <span>-</span></a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Login/logout.php"> <i class="fas fa-sign-out-alt"></i>  خروج</a>
+                  </li>
+                </ul>
             </div>
 
             <!--===================== End of Header Block ========================-->
@@ -130,7 +131,7 @@ session_start();
         <div class="row">
           <div id="sync1" class="owl-carousel owl-theme">
             <div class="text">
-              <h1>إضافة عروض</h1>
+              <h1>إضافة وكلاء</h1>
               <span class="d-flex align-items-center">
                 <b class="a1" style="color: white"
                   >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;أهلا وسهلا بكم</b
@@ -177,17 +178,16 @@ session_start();
           </div>
           
         </div>
-         <div class="form-group"> 
+         <div class="form-group row"> 
            <div class="col-2">
             <label name="discription" class="col-form-label">وصف الوكيل </label>
-          </div> -->
+          </div> 
            <div class="col-5">
             <input name="discription" type="text" class="col-form-label" required />
-          </div> -->
-       
-        <div class="form-group row">
+          </div>
+          <div class="form-group row">
           <div class="col-5 offset-2">
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 20px;">
               <input
                 type="submit"
                 value="إنشاء"
@@ -201,6 +201,7 @@ session_start();
                     </div> -->
           </div>
         </div>
+  
       </div>
     </form>
     <footer class="border-top footer text-muted">

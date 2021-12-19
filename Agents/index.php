@@ -128,21 +128,14 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
 <div class="row ">
   <div class="row ">
     <?php while ($row = mysqli_fetch_array($results)) { ?>
-      <div class="col-xl-3 ">
+      <div class="col-xl-3  aa">
         <div class="price-plan-item-inside">
             <p class="price-plan-text-1"><?php echo $row['AgentName']; ?></p>
             <h3><?php echo $row['discription']; ?></h3>
             </div>
         </div>
       <?php } ?>
-  </div>
-
-
-
-      
-           
-            
-            
+  </div>  
         </div> 
         </div>       
 </div>
@@ -172,10 +165,10 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
             <h4 class="title">الشركة</h4>
             <ul class="list-unstyled">
               <li>
-                <a href="/index.html">الرئيسية</a>
+                <a href="../index.php">الرئيسية</a>
               </li>
               <li>
-                <a href="/About/index.html">من نحن؟</a>
+                <a href="../About/index.php">من نحن؟</a>
               </li>
             </ul>
           </div>
@@ -185,7 +178,7 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
             <h4 class="title">الدعم</h4>
             <ul class="list-unstyled">
               <li>
-                <a href="/Contact/index.html">تواصل معنا</a>
+                <a href="../Contact/index.php">تواصل معنا</a>
               </li>
             </ul>
             <br />

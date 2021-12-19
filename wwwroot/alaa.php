@@ -1,3 +1,7 @@
+<?php
+$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
+ $results = mysqli_query($db, "SELECT * FROM info ORDER BY id DESC LIMIT 10"); 
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -93,10 +97,10 @@
                   <a href="../About/index.php">من نحن<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="../Contact/index.php"> التحكم بالعروض<span>-</span></a>
+                  <a href="../offersControl/offerList.php"> التحكم بالعروض<span>-</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="../Contact/index.php"> التحكم بالوكلاء<span>-</span></a>
+                  <a href="../AgentControl/agentList.php"> التحكم بالوكلاء <span>-</span></a>
                 </li>
                   <li class="nav-item">
                     <a class="nav-link" href="../Login/logout.php"> <i class="fas fa-sign-out-alt"></i>  خروج</a>
@@ -155,22 +159,22 @@
                 </div>
                 <div class="main-slider-logo-block owl-carousel owl-theme">
                   <div class="item">
-                    <img src="wwwroot/img/slider-logo-1.jpg" alt="images" />
+                    <img src="../wwwroot/img/slider-logo-1.jpg" alt="images" />
                   </div>
                   <div class="item">
-                    <img src="wwwroot/img/slider-logo-2.jpg" alt="images" />
+                    <img src="../wwwroot/img/slider-logo-2.jpg" alt="images" />
                   </div>
                   <div class="item">
-                    <img src="wwwroot/img/slider-logo-3.jpg" alt="images" />
+                    <img src="../wwwroot/img/slider-logo-3.jpg" alt="images" />
                   </div>
                   <div class="item">
-                    <img src="wwwroot/img/slider-logo-4.jpg" alt="images" />
+                    <img src="../wwwroot/img/slider-logo-4.jpg" alt="images" />
                   </div>
                   <div class="item">
-                    <img src="wwwroot/img/slider-logo-5.jpg" alt="images" />
+                    <img src="../wwwroot/img/slider-logo-5.jpg" alt="images" />
                   </div>
                   <div class="item">
-                    <img src="wwwroot/img/slider-logo-6.jpg" alt="images" />
+                    <img src="../wwwroot/img/slider-logo-6.jpg" alt="images" />
                   </div>
                 </div>
               </div>
@@ -197,7 +201,7 @@
               <!--===================== Reason Block Cont ========================-->
               <div class="reason-block-cont">
                 <div class="reasons-icon-div">
-                  <img src="wwwroot/img/reason-icon1.svg" alt="images" />
+                  <img src="../wwwroot/img/reason-icon1.svg" alt="images" />
                 </div>
                 <div class="reasons-desc-div">
                   <h4>بيع وتأجير سيرفرات الاستضافة المحمية</h4>
@@ -210,7 +214,7 @@
                 <!--===================== Reason Block Cont ========================-->
                 <div class="reason-block-cont">
                   <div class="reasons-icon-div">
-                    <img src="wwwroot/img/reason-icon2.svg" alt="images" />
+                    <img src="../wwwroot/img/reason-icon2.svg" alt="images" />
                   </div>
                   <div class="reasons-desc-div">
                     <h4>تزويد خدمة المقسم الهاتفي</h4>
@@ -228,7 +232,7 @@
                 <!--===================== Reason Block Cont ========================-->
                 <div class="reason-block-cont">
                   <div class="reasons-icon-div">
-                    <img src="wwwroot/img/reason-icon3.svg" alt="images" />
+                    <img src="../wwwroot/img/reason-icon3.svg" alt="images" />
                   </div>
                   <div class="reasons-desc-div">
                     <h4>
@@ -244,7 +248,7 @@
                 <!--===================== Reason Block Cont ========================-->
                 <div class="reason-block-cont">
                   <div class="reasons-icon-div">
-                    <img src="wwwroot/img/reason-icon4.svg" alt="images" />
+                    <img src="../wwwroot/img/reason-icon4.svg" alt="images" />
                   </div>
                   <div class="reasons-desc-div">
                     <h4>خدمة فاكسك في تلفونك ( fax to mail)</h4>
@@ -291,7 +295,7 @@
           <div class="row">
             <div class="text-center growIn">
               <div class="icon">
-                <img src="wwwroot/img/icon-phone.svg" alt="icon-phone" />
+                <img src="../wwwroot/img/icon-phone.svg" alt="icon-phone" />
               </div>
               <h2 class="h2-main">أهم الإعلانات</h2>
               <p>
@@ -314,112 +318,27 @@
             </div>
           </div>
           <div class="row justify-content-center animatedParent">
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
+
+            <div class="row ">
+              <?php while ($row =mysqli_fetch_array($results)) { ?>
+               
+                <div class="col-xl-3 col-lg-6 col-md-6 custom">
+                    <div class="price-plan-item-inside">
+                        <div class="price-plan-icon-wrap plan-item-icon-1">
+                            <img class="price-plan-item-icon" src="../wwwroot/img/shop-icon1.png" alt="images">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="price-plan-text-1"><?php echo $row['description']; ?></p>
+                        <h3><?php echo $row['price']; ?></h3>
+                    </div>
                 </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
+                <?php } ?>
+              
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-            <div class="custom col-xl-3 col-lg-6 col-md-6">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center animatedParent">
-            <div class="custom col-xl-3 col-lg-6 col-md-6">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 custom">
-              <div class="price-plan-item-inside">
-                <div class="price-plan-icon-wrap plan-item-icon-1">
-                  <img
-                    class="price-plan-item-icon"
-                    src="wwwroot/img/shop-icon1.png"
-                    alt="images"
-                  />
-                </div>
-                <p class="price-plan-text-1">شريحة سلكوم سنوية 10-GB</p>
-                <h3>₪499.00</h3>
-              </div>
-            </div>
+
+       
+            
           </div>
         </div>
       </div>

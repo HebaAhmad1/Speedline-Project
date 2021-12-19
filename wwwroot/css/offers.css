@@ -52,7 +52,9 @@ body {
   max-width: 48%;
   height: 75px;
   margin-bottom: 10px;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
 }
 
@@ -83,6 +85,8 @@ body {
   flex: 0 0 24%;
   max-width: 24%;
   padding-left: 0;
+  width:550px;
+  height:500px;
 }
 
 .price-plan-block .see-brd-btn {

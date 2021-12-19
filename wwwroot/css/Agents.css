@@ -305,13 +305,18 @@ body {
             font-weight: 700;
             margin-bottom: 21px;
         }
-
+.aa{
+  width: 300px;
+  height: 700px;
+}
     .price-plan-block .custom {
         padding-right: 0;
         -ms-flex: 0 0 24%;
         flex: 0 0 24%;
         max-width: 24%;
         padding-left: 0;
+        width: 500px;
+        height: 500px;
     }
 
         .price-plan-block .custom:not(:last-child) {
