@@ -1,8 +1,6 @@
 <?php
 session_start();
 	$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
-  // AgentName discription
-	// initialize variables
 	$id = 0;
     $descriptionErr = $NameErr = "";
     $AgentName =$description ="" ;
