@@ -136,6 +136,9 @@ function input_data($data) {
                 <li class="list-inline-item">
                   <a href="../AgentControl/agentList.php"> التحكم بالوكلاء <span>-</span></a>
                 </li>
+                <li class="list-inline-item">
+                  <a href="../Contact/message.php"> رسائل العملاء <span>-</span></a>
+                </li>
                   <li class="nav-item">
                     <a class="nav-link" href="../Login/logout.php"> <i class="fas fa-sign-out-alt"></i>  خروج</a>
                   </li>

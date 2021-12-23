@@ -1,51 +1,16 @@
+
 <?php
-session_start();
-	$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
-  // AgentName discription
-	// initialize variables
-	$id = 0;
-    $descriptionErr = $NameErr = "";
-    $AgentName =$description ="" ;
-    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-      //String Validation  
-      if (empty($_POST["AgentName"])) {  
-        $NameErr = "Name is required";  
-     } else {  
-         $AgentName = input_data($_POST["AgentName"]);  
-             // check if name only contains letters and whitespace  
-             if (!preg_match("/^[a-zA-Z ]*$/",$AgentName)) {  
-                 $NameErr = "Only alphabets and white space are allowed";  
-             }  
-     } 
-            $description = input_data($_POST["discription"]);  
-  }
- 
-  if(isset($_POST['submit'])) {  
-    if($NameErr== "" && $descriptionErr == "" ) {  
-      mysqli_query($db, "INSERT INTO agent (AgentName, discription) VALUES ('$AgentName', '$description')"); 
-      $_SESSION['message'] = "Offer saved"; 
-      header('location: agentList.php'); 
+$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
+$results = mysqli_query($db, "SELECT * FROM contact"); 
+?>
 
-    }}
-
-
-
-    function input_data($data) {  
-        $data = trim($data);  
-        $data = stripslashes($data);  
-        $data = htmlspecialchars($data);  
-        return $data;  
-      }  
-?> 
-
- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>إضافة وكلاء</title>
+    <title>رسائل العملاء </title>
     <link rel="stylesheet" href="../wwwroot/css/offerControl.css" />
     <link
       rel="stylesheet"
@@ -90,9 +55,6 @@ session_start();
       type="text/css"
       href="../wwwroot/css/responsive-rtl.css"
     />
-    <style>  
-        .error {color: #FF0001;}  
-        </style> 
   </head>
   <body class="about">
     <header id="header">
@@ -151,10 +113,10 @@ session_start();
         <div class="row">
           <div id="sync1" class="owl-carousel owl-theme">
             <div class="text">
-              <h1>إضافة وكلاء</h1>
+              <h1> رسائل العملاء</h1>
               <span class="d-flex align-items-center">
                 <b class="a1" style="color: white"
-                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;أهلا وسهلا بكم</b
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  أهلاً وسهلاً بكم</b
                 >
                 <b class="line">&nbsp;</b>
               </span>
@@ -178,55 +140,36 @@ session_start();
       <div class="mini-cloud two"></div>
       <div class="mini-cloud three"></div>
     </div>
-    <h2 class="text-info" style="padding: 50px; margin-top: -150px">
-      إضافة وكيل
-    </h2>
-    <form method="post" action="">
-      <div class="container">
-        <div class="text-danger"></div>
-        <div class="form-group row">
-          <div class="col-2">
-            <label name="AgentName" class="col-form-label">اسم الوكيل</label>
-          </div>
-          <div class="col-5">
-            <input
-              name="AgentName"
-              type="text"
-              class="col-form-label"
-              required
-            />
-            
-            <span class="error">* <?php echo $NameErr; ?> </span>
-          </div>
-         
-        </div>
-         <div class="form-group row"> 
-           <div class="col-2">
-            <label name="discription" class="col-form-label">عنوان الوكيل </label>
-          </div> 
-           <div class="col-5">
-            <input name="discription" type="text" class="col-form-label" required />
-            <span class="error">* <?php echo $descriptionErr; ?> </span>
-          </div>
-          <div class="form-group row">
-          <div class="col-5 offset-2">
-            <div class="form-group" style="margin-top: 20px;">
-              <input
-                type="submit"
-                value="إنشاء"
-                class="btn btn-primary"
-                name="submit"
-              />
-            </div>
+<table class="table table-striped border">
+        <thead>
+            <tr class="table-secondary">
+                <th><h3>الاسم</h3></th>
+                <th><h3>البريد الالكتروني </h3></th>
+                <th><h3>رقم الهاتف</h3></th>
+                <th><h3>اسم الشركة </h3></th>
+                <th><h3>الرسالة</h3></th>
+                <th colspan="5"></th>
+            </tr>
+        </thead>
+        
+        <?php while ($row = mysqli_fetch_array($results)) { ?>
+            <tr>
+                <td><?php echo $row['name']; ?></td>
+                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['telNum']; ?></td>
+                <td><?php echo $row['company']; ?></td>
+                <td><?php echo $row['message']; ?></td>
+            </tr>
+        <?php } ?>
+    </table>
+    
+    <form>
+    
 
-            <!-- <div>
-                        <a asp-action="Index">الرجوع إلى القائمة</a>
-                    </div> -->
-          </div>
-        </div>
-  
-      </div>
-    </form>
+
+
+
+
     <footer class="border-top footer text-muted">
       <div class="container">
         <div class="row footer-menu-wrap">
