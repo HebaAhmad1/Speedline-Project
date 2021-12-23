@@ -1,32 +1,35 @@
- <?php
+<?php
 session_start();
 	$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
-
+  // AgentName discription
 	// initialize variables
-	$description = "";
 	$id = 0;
     $descriptionErr = $NameErr = "";
+    $AgentName =$description ="" ;
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+      //String Validation  
+      if (empty($_POST["AgentName"])) {  
+        $NameErr = "Name is required";  
+     } else {  
+         $AgentName = input_data($_POST["AgentName"]);  
+             // check if name only contains letters and whitespace  
+             if (!preg_match("/^[a-zA-Z ]*$/",$AgentName)) {  
+                 $NameErr = "Only alphabets and white space are allowed";  
+             }  
+     } 
+            $description = input_data($_POST["discription"]);  
+  }
+ 
+  if(isset($_POST['submit'])) {  
+    if($NameErr== "" && $descriptionErr == "" ) {  
+      mysqli_query($db, "INSERT INTO agent (AgentName, discription) VALUES ('$AgentName', '$description')"); 
+      $_SESSION['message'] = "Offer saved"; 
+      header('location: agentList.php'); 
 
-	if (isset($_POST['submit'])) {
-		$AgentName = $_POST['AgentName'];
-		$discription = $_POST['discription'];
-    $price1 = input_data($AgentName); 
-           $description1 = input_data($description);  
-               // check if name only contains letters and whitespace
-               $a =!preg_match("/^[A-Za-z ]*$/",$price1);
-               $b= !is_string($discription);
-               if ($a) {  
-                   $NameErr= "Only alphabets and white space are allowed";  
-               }  
-               else if($b){
-                $descriptionErr="Only alphabets and white space are allowed";
-               }
-              else{
-                mysqli_query($db, "INSERT INTO agent (AgentName, discription) VALUES ('$AgentName', '$discription')"); 
-                $_SESSION['message'] = "Offer saved"; 
-                header('location: agentList.php');
-               }
-	}
+    }}
+
+
+
     function input_data($data) {  
         $data = trim($data);  
         $data = stripslashes($data);  
@@ -189,9 +192,10 @@ session_start();
               class="col-form-label"
               required
             />
+            
             <span class="error">* <?php echo $NameErr; ?> </span>
           </div>
-          
+         
         </div>
          <div class="form-group row"> 
            <div class="col-2">
