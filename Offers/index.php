@@ -27,35 +27,31 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+      href="../wwwroot/css/Framework/bootstrap.min.css"
     />
     <!--  RTL Bootstrap Css -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.min.css"
+      href="../wwwroot/css/rtl/bootstrap-rtl.min.css"
     />
     <!-- Google Font -->
     <link
       rel="stylesheet"
-      media="screen"
       href="https://fontlibrary.org/face/droid-arabic-kufi"
-      type="text/css"
     />
     <!-- Style Theme -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
+      href="../wwwroot/css/fontawsam/all.css"
+    
     />
-
     <!-- Responsive Theme -->
     <link rel="stylesheet" type="text/css" href="wwwroot/css/responsive.css" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="wwwroot/css/responsive-rtl.css"
+      href="../wwwroot/css/responsive-rtl.css"
     />
 
 </head>

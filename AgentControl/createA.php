@@ -1,22 +1,41 @@
-<?php
+ <?php
 session_start();
 	$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
 
 	// initialize variables
 	$description = "";
-	$price = "";
 	$id = 0;
-	$update = false;
+    $descriptionErr = $NameErr = "";
 
 	if (isset($_POST['submit'])) {
 		$AgentName = $_POST['AgentName'];
 		$discription = $_POST['discription'];
-
-		mysqli_query($db, "INSERT INTO agent (AgentName, discription) VALUES ('$AgentName', '$discription')"); 
-        $_SESSION['message'] = "Offer saved"; 
-        header('location: agentList.php');
+    $price1 = input_data($AgentName); 
+           $description1 = input_data($description);  
+               // check if name only contains letters and whitespace
+               $a =!preg_match("/^[A-Za-z ]*$/",$price1);
+               $b= !is_string($discription);
+               if ($a) {  
+                   $NameErr= "Only alphabets and white space are allowed";  
+               }  
+               else if($b){
+                $descriptionErr="Only alphabets and white space are allowed";
+               }
+              else{
+                mysqli_query($db, "INSERT INTO agent (AgentName, discription) VALUES ('$AgentName', '$discription')"); 
+                $_SESSION['message'] = "Offer saved"; 
+                header('location: agentList.php');
+               }
 	}
-?>
+    function input_data($data) {  
+        $data = trim($data);  
+        $data = stripslashes($data);  
+        $data = htmlspecialchars($data);  
+        return $data;  
+      }  
+?> 
+
+ 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,44 +57,39 @@ session_start();
     <meta name="description" content="شركة سبيد لاين للاتصالات " />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Framework Css -->
-    <link
+        <!-- Framework Css -->
+        <link
       rel="stylesheet"
       type="text/css"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+      href="../wwwroot/css/Framework/bootstrap.min.css"
     />
     <!--  RTL Bootstrap Css -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.min.css"
+      href="../wwwroot/css/rtl/bootstrap-rtl.min.css"
     />
     <!-- Google Font -->
     <link
       rel="stylesheet"
-      media="screen"
       href="https://fontlibrary.org/face/droid-arabic-kufi"
-      type="text/css"
     />
     <!-- Style Theme -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
+      href="../wwwroot/css/fontawsam/all.css"
+    
     />
-
     <!-- Responsive Theme -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../wwwroot/css/responsive.css"
-    />
+    <link rel="stylesheet" type="text/css" href="wwwroot/css/responsive.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="../wwwroot/css/responsive-rtl.css"
     />
+    <style>  
+        .error {color: #FF0001;}  
+        </style> 
   </head>
   <body class="about">
     <header id="header">
@@ -175,15 +189,17 @@ session_start();
               class="col-form-label"
               required
             />
+            <span class="error">* <?php echo $NameErr; ?> </span>
           </div>
           
         </div>
          <div class="form-group row"> 
            <div class="col-2">
-            <label name="discription" class="col-form-label">وصف الوكيل </label>
+            <label name="discription" class="col-form-label">عنوان الوكيل </label>
           </div> 
            <div class="col-5">
             <input name="discription" type="text" class="col-form-label" required />
+            <span class="error">* <?php echo $descriptionErr; ?> </span>
           </div>
           <div class="form-group row">
           <div class="col-5 offset-2">

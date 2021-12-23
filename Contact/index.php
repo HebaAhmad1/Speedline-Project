@@ -1,29 +1,85 @@
-<?php
+<?php  
+
 session_start();
 	$db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
+// define variables to empty values  
+$nameErr = $emailErr = $mobilenoErr =  $companyErr  = $messageErr = "";  
+$name = $email = $mobileno = $company = $message =  "";
 
-	// initialize variables
-	$name = "";
-	$email = "";
-    $telNum=0;
-    $company= "";
-    $message= "";
-	$id = 0;
-
-
-	if (isset($_POST['submit'])) {
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-        $telNum=$_POST['telNum'];
-        $company= $_POST['company'];
-        $message= $_POST['message'];
-
-		mysqli_query($db, "INSERT INTO contact (name,email,telNum,company,message) VALUES ('$name', '$email','$telNum','$company','$message')"); 
-    $_SESSION['message'] = "Offer saved"; 
-    header('location: index.php');
-	}
+if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+    //String Validation  
+    if (empty($_POST["name"])) {  
+        $nameErr = "Name is required";  
+   } else {  
+       $name = input_data($_POST["name"]);  
+           // check if name only contains letters and whitespace  
+           if (!preg_match("/^[a-zA-Z ]*$/",$name)) {  
+               $nameErr = "Only alphabets and white space are allowed";  
+           }  
+   }  
+     
+   //Email Validation   
+   if (empty($_POST["email"])) {  
+           $emailErr = "Email is required";  
+   } else {  
+           $email = input_data($_POST["email"]);  
+           // check that the e-mail address is well-formed  
+           if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {  
+               $emailErr = "Invalid email format";  
+           }  
+    }  
+   
+   //Number Validation  
+   if (empty($_POST["telNum"])) {  
+           $mobilenoErr = "Mobile no is required";  
+   } else {  
+           $mobileno = input_data($_POST["telNum"]);  
+           // check if mobile no is well-formed  
+           if (!preg_match ("/^[0-9]*$/", $mobileno) ) {  
+           $mobilenoErr = "Only numeric value is allowed.";  
+           }  
+       //check mobile no length should not be less and greator than 10  
+       if (strlen ($mobileno) != 10) {  
+           $mobilenoErr = "Mobile no must contain 10 digits.";  
+           }  
+   }  
+     
+   //company Validation      
+   if (empty($_POST["company"])) {  
+       $companyErr = "companyErr is required";  
+   } else {  
+    $company = input_data($_POST["company"]);
+            // check if name only contains letters and whitespace  
+            if (!preg_match("/^[a-zA-Z ]*$/",$company)) {  
+                $companyErr = "Only alphabets and white space are allowed";  
+            }        
+   }  
+     
+   //messege Validation  
+   if (empty ($_POST["message"])) {  
+           $messageErr = "message is required";  
+   } else {  
+           $message = input_data($_POST["message"]);  
+           if (!preg_match("/^[a-zA-Z ]*$/",$message)) {  
+            $messageErr = "Only alphabets and white space are allowed";  
+        }
+      
+} }
+ 
+if(isset($_POST['submit'])) {  
+    if($nameErr == "" && $emailErr == "" && $mobilenoErr == "" && $$companyErr == "" && $messageErr == "" && $agreeErr == "") {  
+        mysqli_query($db, "INSERT INTO contact (name,email,telNum,company,message) VALUES ('$name', '$email','$mobileno','$company','$message')"); 
+        $_SESSION['message'] = "Offer saved"; 
+        header('location: index.php'); 
+    }   
+    }  
+function input_data($data) {  
+ $data = trim($data);  //removes whitespace and other predefined characters from both sides of a string
+ $data = stripslashes($data);  //Remove the backslash
+ $data = htmlspecialchars($data);  // converts some predefined characters to HTML entities.
+ return $data;  
+}  
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,7 +136,11 @@ session_start();
     href="wwwroot/css/responsive-rtl.css"
   />
 </head>
+<style>  
+        .error {color: #FF0001;}  
+        </style> 
 <body>
+
   <header id="header"  >
     <div class="container" style="margin-right: 10px">
       <div
@@ -157,26 +217,34 @@ session_start();
                             <form class="custom-form" action="" method="post">
                                 <div class="form-group">
                                     <label name="name">الاسم</label>
-                                    <input name="name" type="text" class="form-control" required>
+                                    <input name="name" type="text" class="form-control" 
+                                    required>
+                                    <span class="error" style="color:red;">* <?php echo $nameErr; ?> </span> 
+
                                 </div>
                                 <div class="form-group">
                                     <label name="email">الايميل</label>
                                     <input name="email" type="email" class="form-control" required>
+                                    <span class="error" style="color:red;">* <?php echo $emailErr; ?> </span> 
                                 </div>
                                 <div class="form-group">
                                     <label name="telNum">رقم الهاتف</label>
                                     <input name="telNum" type="text" class="form-control" required>
+                                    <span class="error" style="color:red;">* <?php echo $mobilenoErr; ?> </span>
                                 </div>
                                 <div class="form-group">
                                     <label name="company">الشركة</label>
-                                    <input name="company" type="text" class="form-control">
+                                    <input name="company" type="text" class="form-control" required >
+                                    <span class="error" style="color:red;">* <?php echo $companyErr ; ?> </span>
                                 </div>
                                 <div class="form-group last">
                                     <label name="message">الرسالة</label>
-                                    <textarea name="message"></textarea>
+                                    <textarea name="message"></textarea required>
+                                    <span class="error" style="color:red;">* <?php echo $messageErr; ?> </span>
                                 </div>
                                 <div class="text-right">
                                     <button type="submit" name="submit" class="see-brd-btn">أرسل</button>
+   
                                 </div>
                             </form>
                         </div>
@@ -204,7 +272,6 @@ session_start();
                 </div>
             </div>
         </div>
-
 
         <!-- ******************************** FOOTER-->
         <footer class="border-top footer text-muted">

@@ -27,17 +27,3 @@ function scrollFunction() {
   }
 }
 	
-
-// header.fixed {
-// 	background: #0030ff;
-// 	background: linear-gradient(to bottom, #0030ff 0%, #006dff 100%);
-// }
-
-// 	header.fixed .nav-menu li {
-// 		padding: 43px 21px;
-// 	}
-
-// 	header.fixed .nav-menu .sub-menu li {
-// 		padding: 0;
-// 	}
-

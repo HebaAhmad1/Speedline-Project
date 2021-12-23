@@ -11,7 +11,9 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
     <title>شركة سبيد لاين لخدمات الاتصالات</title>
     <link
       rel="stylesheet"
-      href="./wwwroot/css/lib/all.css"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
     />
     <meta
       name="keywords"
@@ -121,7 +123,7 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
                     <div class="inside">
                       <h1>التغطية فل والسرعة بتكفي الكل، تمتع بخصم 25%</h1>
                       <a
-                        href="https://www.textvoice.co.il/"
+                        href="./About/index.php"
                         class="blue-brd-btn"
                         >المزيد</a
                       >
@@ -131,7 +133,7 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
                     <div class="inside">
                       <h1>يوتيوب مجاني لمدة ثلاث أشهر مع باقات كويك نت</h1>
                       <a
-                        href="https://www.textvoice.co.il/"
+                        href="./About/index.php"
                         class="blue-brd-btn"
                         >المزيد</a
                       >
@@ -143,7 +145,7 @@ $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
                         اشترك أو جدد باقات كويك نت و عندك فرصه تكسب بلايستيشن 5
                       </h1>
                       <a
-                        href="https://www.textvoice.co.il/"
+                        href="./About/index.php"
                         class="blue-brd-btn"
                         >المزيد</a
                       >

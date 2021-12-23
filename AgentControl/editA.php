@@ -2,16 +2,47 @@
     $id = $_GET['edit'];
     $db = mysqli_connect('localhost', 'root', '', 'speedline_dp');
     
-if (isset($_POST['update'])) {
-	$id = $_POST['id'];
-	$AgentName = $_POST['AgentName'];
-	$discription = $_POST['discription'];
+    $descriptionErr = $NameErr ="";
 
-	mysqli_query($db, "UPDATE agent SET AgentName='$AgentName', discription='$discription' WHERE id=$id");
-	$_SESSION['message'] = "Address updated!"; 
-	header('location: agentList.php');
+
+
+
+    if (isset($_POST['update'])) {
+        $id = $_POST['id'];
+        $AgentName = $_POST['AgentName'];
+        $discription = $_POST['discription'];
+
+    if (empty($AgentName)) {  
+        $NameErr = " name is required"; 
+   }
+   if(empty($discription))
+    $descriptionErr = "Location is required";  
+   else {  
+       $description1 = input_data($discription);  
+       $price1 = input_data($AgentName); 
+       // check if name only contains letters and whitespace  
+       if (!preg_match("/^[a-zA-Z ]*$/",$description1)) {  
+           $descriptionErr = "Only alphabets and white space are allowed";  
+       }  
+        if(!preg_match("/^[a-zA-Z ]*$/", $price1)){
+        $NameErr="Only alphabets and white space are allowed";
+       }
+           else{
+            mysqli_query($db, "UPDATE agent SET AgentName='$AgentName', discription='$discription' WHERE id=$id");
+            $_SESSION['message'] = "Address updated!"; 
+            header('location: agentList.php');
+           }
+   }  
+    
 }
+function input_data($data) {  
+    $data = trim($data);  
+    $data = stripslashes($data);  
+    $data = htmlspecialchars($data);  
+    return $data;  
+  }  
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,44 +64,39 @@ if (isset($_POST['update'])) {
     <meta name="description" content="شركة سبيد لاين للاتصالات " />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Framework Css -->
-    <link
+        <!-- Framework Css -->
+        <link
       rel="stylesheet"
       type="text/css"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+      href="../wwwroot/css/Framework/bootstrap.min.css"
     />
     <!--  RTL Bootstrap Css -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.min.css"
+      href="../wwwroot/css/rtl/bootstrap-rtl.min.css"
     />
     <!-- Google Font -->
     <link
       rel="stylesheet"
-      media="screen"
       href="https://fontlibrary.org/face/droid-arabic-kufi"
-      type="text/css"
     />
     <!-- Style Theme -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
+      href="../wwwroot/css/fontawsam/all.css"
+    
     />
-
     <!-- Responsive Theme -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../wwwroot/css/responsive.css"
-    />
+    <link rel="stylesheet" type="text/css" href="wwwroot/css/responsive.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="../wwwroot/css/responsive-rtl.css"
     />
+    <style>  
+        .error {color: #FF0001;}  
+        </style> 
   </head>
   <body class="about">
     <header id="header">
@@ -171,15 +197,18 @@ if (isset($_POST['update'])) {
               class="col-form-label"
               required
             />
+            <span class="error">* <?php echo $NameErr; ?> </span>
           </div>
           <!-- <span asp-validation-for="DescriptionAr" class="text-danger"></span> -->
         </div>
         <div class="form-group row">
           <div class="col-2">
             <label name="discription" class="col-form-label">مكان الوكيل</label>
+
           </div>
           <div class="col-5">
             <input name="discription" type="text" class="col-form-label" required />
+            <span class="error">* <?php echo $descriptionErr; ?> </span>
           </div>
           <!-- <span asp-validation-for="Price" class="text-danger"></span> -->
         </div>

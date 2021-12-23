@@ -1,21 +1,31 @@
 <?php
 session_start();
 $conn = mysqli_connect('localhost', 'root', '', 'speedline_dp');
+$loginErr="";
+$userErr = $passErr ="";
+$user= "";
+$pass = "";
+
 if(isset($_POST['Login'])) {
     $user = htmlspecialchars($_POST['name']);
     $pass = htmlspecialchars($_POST['password']);
+    
+    if (empty($user)) {  
+      $userErr = "username is required";  
+     }
+     else if(empty($pass)){
+     $passErr = "password  is required";  
+ }
 
     $sql = "SELECT * FROM users WHERE name = '$user' and password='$pass'";
     $result = mysqli_query($conn, $sql);
     $user = mysqli_fetch_assoc($result);
-
    
-
 	if($user) {
 		$_SESSION['Login'] = 1;
 		header("Location: ../wwwroot/alaa.php");
 	}else {
-		echo 'Username or Password Incorrect, Please try again';
+		$loginErr= "Username or Password Incorrect, Please try again";
 	}
 }
 ?>
@@ -45,40 +55,42 @@ if(isset($_POST['Login'])) {
     <meta name="description" content="شركة سبيد لاين للاتصالات " />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Framework Css -->
-    <link
+     <!-- Framework Css -->
+     <link
       rel="stylesheet"
       type="text/css"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+      href="../wwwroot/css/Framework/bootstrap.min.css"
     />
     <!--  RTL Bootstrap Css -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.min.css"
+      href="../wwwroot/css/rtl/bootstrap-rtl.min.css"
     />
     <!-- Google Font -->
     <link
       rel="stylesheet"
-      media="screen"
       href="https://fontlibrary.org/face/droid-arabic-kufi"
-      type="text/css"
     />
     <!-- Style Theme -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
+      href="../wwwroot/css/fontawsam/all.css"
+    
     />
-
     <!-- Responsive Theme -->
-    <link rel="stylesheet" type="text/css" href="../wwwroot/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="wwwroot/css/responsive.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="../wwwroot/css/responsive-rtl.css"
     />
+    <style>  
+        .error{
+          color: red;
+          font-size: 20px;
+        }  
+        </style>  
   </head>
   <body>
     <header id="header"  >
@@ -140,16 +152,16 @@ if(isset($_POST['Login'])) {
               <h4>تسجيل الدخول</h4>
               <div class="form-group">
                 <label name="UserName">اسم المستخدم</label>
-                <input name="name" class="form-control" />
-                <span class="text-danger"></span>
+                <input name="name" class="form-control"  />
+                <span class="error">* <?php echo $userErr; ?> </span>  
               </div>
               <div class="form-group last">
                 <label name="">كلمة المرور</label>
                 <input type="password" name="password" class="form-control" />
-                <span class="text-danger"></span>
+                <span class="error">* <?php echo $passErr; ?> </span>  
               </div>
               <div class="text-center">
-                <button type="submit" class="see-brd-btn"  name="Login" value="Login" >تسجيل الدخول</button>
+                <button type="submit" class="see-brd-btn"  name="Login" value="Login" >تسجيل الدخول</button> <span class="error"> <?php echo $loginErr; ?> </span>
               </div>
             </form>
             <!--===================== End of Custom Form ========================-->

@@ -82,11 +82,11 @@ body {
   text-align: center;
   font-size: 15px;
   display: block;
-  color: #706fa4;
+  color: red;
 }
 .login-page .custom-form span a,
 .sign-up .custom-form span a {
-  color: #006dff;
+  color: red;
   font-family: "Myriad-Pro-Regular", serif;
 }
 .text-head h5 {
